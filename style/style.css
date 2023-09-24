@@ -13,3 +13,8 @@ body.dark {
   --main-txt-color: #222222;
   background: var(--bg-color);
 }
+
+.icon {
+  color: var(--main-txt-color);
+  font-size: 2em;
+}
