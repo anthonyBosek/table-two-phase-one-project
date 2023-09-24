@@ -1,0 +1,15 @@
+/* fonts */
+
+/* light mode */
+body {
+  --bg-color: #333333;
+  --accent-color: #1e90ff;
+  --main-txt-color: #ffffff;
+  background: var(--bg-color);
+}
+/* dark mode */
+body.dark {
+  --bg-color: #eeeeee;
+  --main-txt-color: #222222;
+  background: var(--bg-color);
+}
