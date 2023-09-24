@@ -2,19 +2,77 @@
 
 /* light mode */
 body {
-  --bg-color: #333333;
+  --bg-color: #eeeeee;
+  --main-txt-color: #222222;
+
   --accent-color: #1e90ff;
-  --main-txt-color: #ffffff;
+
   background: var(--bg-color);
 }
 /* dark mode */
 body.dark {
-  --bg-color: #eeeeee;
-  --main-txt-color: #222222;
+  --bg-color: #333333;
+  --main-txt-color: #ffffff;
+
   background: var(--bg-color);
 }
 
+/* icons */
 .icon {
   color: var(--main-txt-color);
   font-size: 2em;
+}
+
+/* hide */
+.hide {
+  display: none;
+}
+
+nav {
+  height: 10vh;
+  border-bottom: 3px solid var(--main-txt-color);
+}
+
+main {
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+#table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid yellow;
+}
+
+#card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid green;
+}
+
+#modal-container {
+  display: none;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+#modal {
+  height: 60%;
+  width: 60%;
+  background: #fff;
+  border: 2px solid red;
+}
+
+footer {
+  height: 10vh;
+  border-top: 3px solid var(--main-txt-color);
 }

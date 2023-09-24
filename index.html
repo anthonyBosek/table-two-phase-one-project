@@ -28,13 +28,23 @@
     <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
+    <!-- <body class="dark"> -->
     <nav id="nav-bar">
-      <i class="fa fa-sun-o icon"></i>
-      <i class="fa fa-moon-o icon"></i>
+      <label for="mode-toggle">
+        <i class="fa fa-sun-o icon"></i>
+        <i class="fa fa-moon-o icon"></i>
+      </label>
+
+      <label for="search">
+        <input type="text" name="search" id="search" />
+      </label>
+
       <i class="fa fa-shopping-cart icon"></i>
     </nav>
     <main>
-      <div id="modal-container"></div>
+      <div id="modal-container">
+        <div id="modal"></div>
+      </div>
       <div id="table-container"></div>
       <div id="card-container"></div>
     </main>
