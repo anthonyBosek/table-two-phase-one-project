@@ -1,5 +1,6 @@
 /* Global Variables */
-const pokemonUrl = "http://localhost:3000/pokemon?_limit=50";
+// const pokemonUrl = "http://localhost:3000/pokemon?_limit=50";
+const pokemonUrl = "http://localhost:3000/pokemon?_limit=25";
 const postPokemonUrl = "http://localhost:3000/inventory"
 const weaknessArray = ["Bug", "Poison", "Fire", "Psychic", "Flying", "Ice",  "Water", "Ground", "Rock", "Electric"];
 
@@ -29,7 +30,7 @@ const postPokemon = (pokeObj) => {
 const updatePokemon = (pokeObj) => {
     const newObj = {...pokeObj};
     newObj.inventory = Math.floor(Math.random() * 21);
-    newObj.price = `$${Math.floor(Math.random() * 101).toFixed(2)}`;
+    newObj.price = Math.floor(Math.random() * 101).toFixed(2);
     newObj.resistance = weaknessArray[Math.floor(Math.random() * weaknessArray.length)];
     newObj.resistanceAmount = Math.floor((Math.random() * 5) + 1) * 10;
     newObj.retreatCost = Math.floor(Math.random() * 4);
@@ -54,7 +55,7 @@ const getAllPokemon = () => {
         }
     })
     .then(data => {
-        data = data.slice(25);
+        // data = data.slice(25);
         data.forEach(item => updatePokemon(item));
     })
     .catch(err => alert(err))
