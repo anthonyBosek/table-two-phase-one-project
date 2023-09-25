@@ -27,24 +27,36 @@
     <script defer src="./src/card.js"></script>
     <link rel="stylesheet" href="./style/style.css" />
   </head>
-  <body>
-    <!-- <body class="dark"> -->
+  <!-- <body> -->
+  <body class="dark">
+    <!-- Navbar -->
     <nav id="nav-bar">
-      <label for="mode-toggle">
-        <i class="fa fa-sun-o icon"></i>
-        <i class="fa fa-moon-o icon"></i>
-      </label>
+      <div id="header"><h1>ABA Card Shop</h1></div>
+      <div id="control-bar">
+        <form id="search">
+          <input type="text" name="search" />
+          <input type="submit" value="Search" />
+        </form>
 
-      <label for="search">
-        <input type="text" name="search" id="search" />
-      </label>
+        <span id="mode">
+          <label for="mode-toggle">
+            <!-- <i class="fa fa-sun-o icon"></i> -->
+            <i class="fa fa-moon-o icon"></i> </label
+        ></span>
 
-      <i class="fa fa-shopping-cart icon"></i>
+        <span id="cart">
+          <i class="fa fa-shopping-cart icon"></i>
+        </span>
+      </div>
     </nav>
+
     <main>
+      <!-- Modal -->
       <div id="modal-container">
         <div id="modal"></div>
       </div>
+
+      <!-- Table -->
       <div id="table-container">
         <table class="table">
           <!-- <table class="table table-dark"> -->
@@ -57,35 +69,17 @@
               <th>Price</th>
             </tr>
           </thead>
-          <tbody>
-            <tr class="table-success">
-              <td>001</td>
-              <td>Bulbasaur</td>
-              <td>Grass, Poison</td>
-              <td>117</td>
-              <td>$1.00</td>
-            </tr>
-            <tr class="table-danger">
-              <td>004</td>
-              <td>Charmander</td>
-              <td>Fire</td>
-              <td>95</td>
-              <td>$1.00</td>
-            </tr>
-            <tr class="table-primary">
-              <td>007</td>
-              <td>Squirtle</td>
-              <td>Water</td>
-              <td>62</td>
-              <td>$1.00</td>
-            </tr>
-          </tbody>
+          <tbody></tbody>
         </table>
       </div>
+
+      <!-- Card -->
       <div id="card-container">
         <div id="card"></div>
       </div>
     </main>
+
+    <!-- Footer -->
     <footer id="footer"></footer>
   </body>
 </html>
