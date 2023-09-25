@@ -29,7 +29,7 @@ const postPokemon = (pokeObj) => {
 const updatePokemon = (pokeObj) => {
     const newObj = {...pokeObj};
     newObj.inventory = Math.floor(Math.random() * 21);
-    newObj.price = `$${Math.floor(Math.random() * 101).toFixed(2)}`;
+    newObj.price = `${Math.floor(Math.random() * 101).toFixed(2)}`;
     newObj.resistance = weaknessArray[Math.floor(Math.random() * weaknessArray.length)];
     newObj.resistanceAmount = Math.floor((Math.random() * 5) + 1) * 10;
     newObj.retreatCost = Math.floor(Math.random() * 4);
