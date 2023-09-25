@@ -28,31 +28,51 @@ body.dark {
   display: none;
 }
 
+/* nav-bar */
 nav {
   height: 10vh;
   border-bottom: 3px solid var(--main-txt-color);
 }
 
+/* main section */
 main {
   height: 80vh;
   display: grid;
   grid-template-columns: 60% 40%;
 }
 
+/* table component */
 #table-container {
   display: flex;
   justify-content: center;
   align-items: center;
   border: 2px solid yellow;
 }
+#table-container > table {
+  border-collapse: collapse;
+  width: 90%;
+  border: 2px solid var(--main-txt-color);
+}
+.scale {
+  transform: scale(1.02);
+  border: 1px solid black;
+}
 
+/* card component */
 #card-container {
   display: flex;
   justify-content: center;
   align-items: center;
   border: 2px solid green;
 }
+#card {
+  height: 70%;
+  width: 50%;
+  border: 5px solid rgb(255, 236, 80);
+  border-radius: 5px;
+}
 
+/* modal component */
 #modal-container {
   display: none;
   /* display: flex; */
@@ -72,6 +92,7 @@ main {
   border: 2px solid red;
 }
 
+/* footer */
 footer {
   height: 10vh;
   border-top: 3px solid var(--main-txt-color);
