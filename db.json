@@ -23,23 +23,23 @@
       "abilities": [
         "Overgrow"
       ],
-      "weakness": "Water",
+      "weakness": "Ground",
       "type": [
         "grass",
         "poison"
       ],
       "ThumbnailAltText": "Bulbasaur",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png",
-      "inventory": 3,
-      "price": "$36.00",
-      "resistance": "Psychic",
-      "resistanceAmount": 10,
-      "retreatCost": 0,
-      "hitPoints": 106,
+      "inventory": 20,
+      "price": "27.00",
+      "resistance": "Electric",
+      "resistanceAmount": 40,
+      "retreatCost": 3,
+      "hitPoints": 80,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 80,
-      "abilityIconAmount": 2,
+      "abilityStrength": 50,
+      "abilityIconAmount": 3,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 1
     },
@@ -52,23 +52,23 @@
       "abilities": [
         "Overgrow"
       ],
-      "weakness": "Ground",
+      "weakness": "Ice",
       "type": [
         "grass",
         "poison"
       ],
       "ThumbnailAltText": "Ivysaur",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/002.png",
-      "inventory": 7,
-      "price": "$5.00",
-      "resistance": "Electric",
-      "resistanceAmount": 10,
-      "retreatCost": 0,
-      "hitPoints": 61,
+      "inventory": 10,
+      "price": "13.00",
+      "resistance": "Bug",
+      "resistanceAmount": 30,
+      "retreatCost": 3,
+      "hitPoints": 32,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 90,
-      "abilityIconAmount": 3,
+      "abilityStrength": 100,
+      "abilityIconAmount": 4,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 2
     },
@@ -81,81 +81,25 @@
       "abilities": [
         "Overgrow"
       ],
-      "weakness": "Ice",
+      "weakness": "Electric",
       "type": [
         "grass",
         "poison"
       ],
       "ThumbnailAltText": "Venusaur",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/003.png",
-      "inventory": 14,
-      "price": "$74.00",
-      "resistance": "Rock",
-      "resistanceAmount": 40,
-      "retreatCost": 3,
-      "hitPoints": 57,
+      "inventory": 4,
+      "price": "4.00",
+      "resistance": "Water",
+      "resistanceAmount": 20,
+      "retreatCost": 1,
+      "hitPoints": 39,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 60,
-      "abilityIconAmount": 3,
+      "abilityStrength": 70,
+      "abilityIconAmount": 1,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 3
-    },
-    {
-      "number": "004",
-      "name": "Charmander",
-      "slug": "charmander",
-      "weight": 8.5,
-      "height": 0.6,
-      "abilities": [
-        "Blaze"
-      ],
-      "weakness": "Psychic",
-      "type": [
-        "fire"
-      ],
-      "ThumbnailAltText": "Charmander",
-      "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png",
-      "inventory": 12,
-      "price": "$6.00",
-      "resistance": "Ice",
-      "resistanceAmount": 30,
-      "retreatCost": 2,
-      "hitPoints": 51,
-      "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
-      "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 60,
-      "abilityIconAmount": 4,
-      "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 4
-    },
-    {
-      "number": "005",
-      "name": "Charmeleon",
-      "slug": "charmeleon",
-      "weight": 19,
-      "height": 1.1,
-      "abilities": [
-        "Blaze"
-      ],
-      "weakness": "Poison",
-      "type": [
-        "fire"
-      ],
-      "ThumbnailAltText": "Charmeleon",
-      "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/005.png",
-      "inventory": 7,
-      "price": "$60.00",
-      "resistance": "Fire",
-      "resistanceAmount": 10,
-      "retreatCost": 3,
-      "hitPoints": 81,
-      "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
-      "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 90,
-      "abilityIconAmount": 3,
-      "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 5
     },
     {
       "number": "006",
@@ -166,25 +110,53 @@
       "abilities": [
         "Blaze"
       ],
-      "weakness": "Ground",
+      "weakness": "Fire",
       "type": [
         "fire",
         "flying"
       ],
       "ThumbnailAltText": "Charizard",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png",
-      "inventory": 7,
-      "price": "$99.00",
-      "resistance": "Bug",
-      "resistanceAmount": 10,
-      "retreatCost": 2,
-      "hitPoints": 96,
+      "inventory": 12,
+      "price": "48.00",
+      "resistance": "Poison",
+      "resistanceAmount": 20,
+      "retreatCost": 1,
+      "hitPoints": 71,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
       "abilityStrength": 100,
       "abilityIconAmount": 1,
       "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 6
+      "id": 4
+    },
+    {
+      "number": "004",
+      "name": "Charmander",
+      "slug": "charmander",
+      "weight": 8.5,
+      "height": 0.6,
+      "abilities": [
+        "Blaze"
+      ],
+      "weakness": "Bug",
+      "type": [
+        "fire"
+      ],
+      "ThumbnailAltText": "Charmander",
+      "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png",
+      "inventory": 5,
+      "price": "0.00",
+      "resistance": "Ice",
+      "resistanceAmount": 50,
+      "retreatCost": 0,
+      "hitPoints": 34,
+      "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
+      "abilitiesText": "Much shorter random text to fill up card space.",
+      "abilityStrength": 80,
+      "abilityIconAmount": 3,
+      "flavorText": "This project was a blast and my teammates are awesome!",
+      "id": 5
     },
     {
       "number": "007",
@@ -195,21 +167,49 @@
       "abilities": [
         "Torrent"
       ],
-      "weakness": "Psychic",
+      "weakness": "Flying",
       "type": [
         "water"
       ],
       "ThumbnailAltText": "Squirtle",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png",
-      "inventory": 17,
-      "price": "$15.00",
-      "resistance": "Psychic",
-      "resistanceAmount": 40,
+      "inventory": 18,
+      "price": "47.00",
+      "resistance": "Ice",
+      "resistanceAmount": 10,
       "retreatCost": 2,
-      "hitPoints": 55,
+      "hitPoints": 52,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 90,
+      "abilityStrength": 80,
+      "abilityIconAmount": 1,
+      "flavorText": "This project was a blast and my teammates are awesome!",
+      "id": 6
+    },
+    {
+      "number": "005",
+      "name": "Charmeleon",
+      "slug": "charmeleon",
+      "weight": 19,
+      "height": 1.1,
+      "abilities": [
+        "Blaze"
+      ],
+      "weakness": "Rock",
+      "type": [
+        "fire"
+      ],
+      "ThumbnailAltText": "Charmeleon",
+      "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/005.png",
+      "inventory": 3,
+      "price": "90.00",
+      "resistance": "Poison",
+      "resistanceAmount": 30,
+      "retreatCost": 3,
+      "hitPoints": 119,
+      "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
+      "abilitiesText": "Much shorter random text to fill up card space.",
+      "abilityStrength": 70,
       "abilityIconAmount": 4,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 7
@@ -223,22 +223,22 @@
       "abilities": [
         "Torrent"
       ],
-      "weakness": "Water",
+      "weakness": "Poison",
       "type": [
         "water"
       ],
       "ThumbnailAltText": "Wartortle",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/008.png",
-      "inventory": 1,
-      "price": "$22.00",
-      "resistance": "Water",
-      "resistanceAmount": 20,
+      "inventory": 11,
+      "price": "45.00",
+      "resistance": "Fire",
+      "resistanceAmount": 40,
       "retreatCost": 1,
-      "hitPoints": 41,
+      "hitPoints": 84,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 80,
-      "abilityIconAmount": 1,
+      "abilityStrength": 30,
+      "abilityIconAmount": 3,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 8
     },
@@ -251,22 +251,22 @@
       "abilities": [
         "Torrent"
       ],
-      "weakness": "Rock",
+      "weakness": "Bug",
       "type": [
         "water"
       ],
       "ThumbnailAltText": "Blastoise",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/009.png",
-      "inventory": 1,
-      "price": "$68.00",
-      "resistance": "Poison",
-      "resistanceAmount": 50,
-      "retreatCost": 1,
-      "hitPoints": 98,
+      "inventory": 4,
+      "price": "58.00",
+      "resistance": "Ground",
+      "resistanceAmount": 40,
+      "retreatCost": 3,
+      "hitPoints": 112,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 70,
-      "abilityIconAmount": 4,
+      "abilityStrength": 50,
+      "abilityIconAmount": 3,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 9
     },
@@ -285,16 +285,16 @@
       ],
       "ThumbnailAltText": "Caterpie",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/010.png",
-      "inventory": 18,
-      "price": "$74.00",
-      "resistance": "Water",
-      "resistanceAmount": 50,
-      "retreatCost": 3,
-      "hitPoints": 23,
+      "inventory": 0,
+      "price": "52.00",
+      "resistance": "Flying",
+      "resistanceAmount": 20,
+      "retreatCost": 2,
+      "hitPoints": 34,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 30,
-      "abilityIconAmount": 1,
+      "abilityStrength": 80,
+      "abilityIconAmount": 3,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 10
     },
@@ -307,22 +307,22 @@
       "abilities": [
         "Shed Skin"
       ],
-      "weakness": "Psychic",
+      "weakness": "Ice",
       "type": [
         "bug"
       ],
       "ThumbnailAltText": "Metapod",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/011.png",
-      "inventory": 0,
-      "price": "$69.00",
+      "inventory": 11,
+      "price": "88.00",
       "resistance": "Poison",
-      "resistanceAmount": 50,
-      "retreatCost": 2,
-      "hitPoints": 21,
+      "resistanceAmount": 10,
+      "retreatCost": 0,
+      "hitPoints": 81,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 70,
-      "abilityIconAmount": 3,
+      "abilityStrength": 50,
+      "abilityIconAmount": 2,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 11
     },
@@ -335,23 +335,23 @@
       "abilities": [
         "Compound Eyes"
       ],
-      "weakness": "Psychic",
+      "weakness": "Flying",
       "type": [
         "bug",
         "flying"
       ],
       "ThumbnailAltText": "Butterfree",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/012.png",
-      "inventory": 13,
-      "price": "$38.00",
-      "resistance": "Bug",
-      "resistanceAmount": 50,
-      "retreatCost": 0,
-      "hitPoints": 103,
+      "inventory": 11,
+      "price": "51.00",
+      "resistance": "Fire",
+      "resistanceAmount": 30,
+      "retreatCost": 1,
+      "hitPoints": 46,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 60,
-      "abilityIconAmount": 3,
+      "abilityStrength": 80,
+      "abilityIconAmount": 2,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 12
     },
@@ -364,54 +364,25 @@
       "abilities": [
         "Shield Dust"
       ],
-      "weakness": "Electric",
+      "weakness": "Fire",
       "type": [
         "bug",
         "poison"
       ],
       "ThumbnailAltText": "Weedle",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/013.png",
-      "inventory": 11,
-      "price": "$89.00",
-      "resistance": "Ice",
-      "resistanceAmount": 10,
-      "retreatCost": 2,
-      "hitPoints": 119,
+      "inventory": 16,
+      "price": "87.00",
+      "resistance": "Ground",
+      "resistanceAmount": 50,
+      "retreatCost": 3,
+      "hitPoints": 39,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
       "abilityStrength": 30,
-      "abilityIconAmount": 2,
+      "abilityIconAmount": 4,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 13
-    },
-    {
-      "number": "014",
-      "name": "Kakuna",
-      "slug": "kakuna",
-      "weight": 10,
-      "height": 0.6,
-      "abilities": [
-        "Shed Skin"
-      ],
-      "weakness": "Poison",
-      "type": [
-        "bug",
-        "poison"
-      ],
-      "ThumbnailAltText": "Kakuna",
-      "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/014.png",
-      "inventory": 7,
-      "price": "$92.00",
-      "resistance": "Poison",
-      "resistanceAmount": 20,
-      "retreatCost": 3,
-      "hitPoints": 115,
-      "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
-      "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 60,
-      "abilityIconAmount": 2,
-      "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 14
     },
     {
       "number": "015",
@@ -422,25 +393,25 @@
       "abilities": [
         "Swarm"
       ],
-      "weakness": "Rock",
+      "weakness": "Ground",
       "type": [
         "bug",
         "poison"
       ],
       "ThumbnailAltText": "Beedrill",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/015.png",
-      "inventory": 14,
-      "price": "$44.00",
-      "resistance": "Poison",
-      "resistanceAmount": 40,
-      "retreatCost": 2,
-      "hitPoints": 48,
+      "inventory": 6,
+      "price": "15.00",
+      "resistance": "Ice",
+      "resistanceAmount": 10,
+      "retreatCost": 1,
+      "hitPoints": 27,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 20,
-      "abilityIconAmount": 2,
+      "abilityStrength": 60,
+      "abilityIconAmount": 3,
       "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 15
+      "id": 14
     },
     {
       "number": "016",
@@ -452,7 +423,7 @@
         "Keen Eye",
         "Tangled Feet"
       ],
-      "weakness": "Ice",
+      "weakness": "Psychic",
       "type": [
         "normal",
         "flying"
@@ -460,17 +431,17 @@
       "ThumbnailAltText": "Pidgey",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/016.png",
       "inventory": 8,
-      "price": "$53.00",
-      "resistance": "Ice",
+      "price": "81.00",
+      "resistance": "Fire",
       "resistanceAmount": 10,
-      "retreatCost": 3,
-      "hitPoints": 22,
+      "retreatCost": 2,
+      "hitPoints": 29,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
       "abilityStrength": 60,
-      "abilityIconAmount": 4,
+      "abilityIconAmount": 1,
       "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 16
+      "id": 15
     },
     {
       "number": "017",
@@ -482,22 +453,51 @@
         "Keen Eye",
         "Tangled Feet"
       ],
-      "weakness": "Electric",
+      "weakness": "Ice",
       "type": [
         "normal",
         "flying"
       ],
       "ThumbnailAltText": "Pidgeotto",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/017.png",
-      "inventory": 14,
-      "price": "$72.00",
-      "resistance": "Ice",
-      "resistanceAmount": 40,
-      "retreatCost": 1,
-      "hitPoints": 32,
+      "inventory": 7,
+      "price": "24.00",
+      "resistance": "Flying",
+      "resistanceAmount": 50,
+      "retreatCost": 0,
+      "hitPoints": 89,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 40,
+      "abilityStrength": 60,
+      "abilityIconAmount": 4,
+      "flavorText": "This project was a blast and my teammates are awesome!",
+      "id": 16
+    },
+    {
+      "number": "014",
+      "name": "Kakuna",
+      "slug": "kakuna",
+      "weight": 10,
+      "height": 0.6,
+      "abilities": [
+        "Shed Skin"
+      ],
+      "weakness": "Flying",
+      "type": [
+        "bug",
+        "poison"
+      ],
+      "ThumbnailAltText": "Kakuna",
+      "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/014.png",
+      "inventory": 18,
+      "price": "96.00",
+      "resistance": "Electric",
+      "resistanceAmount": 50,
+      "retreatCost": 1,
+      "hitPoints": 118,
+      "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
+      "abilitiesText": "Much shorter random text to fill up card space.",
+      "abilityStrength": 10,
       "abilityIconAmount": 3,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 17
@@ -512,23 +512,23 @@
         "Keen Eye",
         "Tangled Feet"
       ],
-      "weakness": "Rock",
+      "weakness": "Flying",
       "type": [
         "normal",
         "flying"
       ],
       "ThumbnailAltText": "Pidgeot",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/018.png",
-      "inventory": 10,
-      "price": "$46.00",
-      "resistance": "Water",
+      "inventory": 20,
+      "price": "71.00",
+      "resistance": "Psychic",
       "resistanceAmount": 10,
       "retreatCost": 1,
-      "hitPoints": 93,
+      "hitPoints": 62,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 90,
-      "abilityIconAmount": 3,
+      "abilityStrength": 70,
+      "abilityIconAmount": 2,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 18
     },
@@ -542,22 +542,22 @@
         "Guts",
         "Run Away"
       ],
-      "weakness": "Poison",
+      "weakness": "Ice",
       "type": [
         "normal"
       ],
       "ThumbnailAltText": "Rattata",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/019.png",
-      "inventory": 12,
-      "price": "$14.00",
-      "resistance": "Ground",
-      "resistanceAmount": 10,
+      "inventory": 17,
+      "price": "66.00",
+      "resistance": "Flying",
+      "resistanceAmount": 30,
       "retreatCost": 2,
-      "hitPoints": 20,
+      "hitPoints": 85,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 80,
-      "abilityIconAmount": 4,
+      "abilityStrength": 70,
+      "abilityIconAmount": 2,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 19
     },
@@ -571,18 +571,18 @@
         "Guts",
         "Run Away"
       ],
-      "weakness": "Rock",
+      "weakness": "Fire",
       "type": [
         "normal"
       ],
       "ThumbnailAltText": "Raticate",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/020.png",
-      "inventory": 11,
-      "price": "$99.00",
-      "resistance": "Ground",
-      "resistanceAmount": 30,
-      "retreatCost": 2,
-      "hitPoints": 50,
+      "inventory": 8,
+      "price": "91.00",
+      "resistance": "Water",
+      "resistanceAmount": 50,
+      "retreatCost": 1,
+      "hitPoints": 114,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
       "abilityStrength": 80,
@@ -599,22 +599,22 @@
       "abilities": [
         "Keen Eye"
       ],
-      "weakness": "Flying",
+      "weakness": "Fire",
       "type": [
         "normal",
         "flying"
       ],
       "ThumbnailAltText": "Spearow",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/021.png",
-      "inventory": 8,
-      "price": "$67.00",
+      "inventory": 3,
+      "price": "7.00",
       "resistance": "Rock",
-      "resistanceAmount": 10,
-      "retreatCost": 3,
-      "hitPoints": 78,
+      "resistanceAmount": 50,
+      "retreatCost": 2,
+      "hitPoints": 70,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 70,
+      "abilityStrength": 40,
       "abilityIconAmount": 3,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 21
@@ -628,23 +628,23 @@
       "abilities": [
         "Keen Eye"
       ],
-      "weakness": "Water",
+      "weakness": "Bug",
       "type": [
         "normal",
         "flying"
       ],
       "ThumbnailAltText": "Fearow",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/022.png",
-      "inventory": 2,
-      "price": "$48.00",
-      "resistance": "Electric",
-      "resistanceAmount": 40,
-      "retreatCost": 1,
-      "hitPoints": 38,
+      "inventory": 10,
+      "price": "89.00",
+      "resistance": "Psychic",
+      "resistanceAmount": 10,
+      "retreatCost": 0,
+      "hitPoints": 64,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 100,
-      "abilityIconAmount": 2,
+      "abilityStrength": 30,
+      "abilityIconAmount": 1,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 22
     },
@@ -658,22 +658,22 @@
         "Intimidate",
         "Shed Skin"
       ],
-      "weakness": "Electric",
+      "weakness": "Poison",
       "type": [
         "poison"
       ],
       "ThumbnailAltText": "Ekans",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/023.png",
-      "inventory": 19,
-      "price": "$61.00",
-      "resistance": "Water",
+      "inventory": 7,
+      "price": "13.00",
+      "resistance": "Flying",
       "resistanceAmount": 10,
-      "retreatCost": 0,
-      "hitPoints": 73,
+      "retreatCost": 3,
+      "hitPoints": 23,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
       "abilityStrength": 20,
-      "abilityIconAmount": 4,
+      "abilityIconAmount": 3,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 23
     },
@@ -687,22 +687,22 @@
         "Intimidate",
         "Shed Skin"
       ],
-      "weakness": "Rock",
+      "weakness": "Psychic",
       "type": [
         "poison"
       ],
       "ThumbnailAltText": "Arbok",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/024.png",
-      "inventory": 9,
-      "price": "$82.00",
-      "resistance": "Bug",
-      "resistanceAmount": 40,
-      "retreatCost": 2,
-      "hitPoints": 24,
+      "inventory": 1,
+      "price": "42.00",
+      "resistance": "Ground",
+      "resistanceAmount": 20,
+      "retreatCost": 0,
+      "hitPoints": 76,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
       "abilityStrength": 40,
-      "abilityIconAmount": 4,
+      "abilityIconAmount": 1,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 24
     },
@@ -715,22 +715,22 @@
       "abilities": [
         "Static"
       ],
-      "weakness": "Ice",
+      "weakness": "Bug",
       "type": [
         "electric"
       ],
       "ThumbnailAltText": "Pikachu",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/025.png",
       "inventory": 7,
-      "price": "$9.00",
+      "price": "9.00",
       "resistance": "Rock",
-      "resistanceAmount": 10,
-      "retreatCost": 1,
-      "hitPoints": 70,
+      "resistanceAmount": 30,
+      "retreatCost": 3,
+      "hitPoints": 36,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 40,
-      "abilityIconAmount": 1,
+      "abilityStrength": 100,
+      "abilityIconAmount": 2,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 25
     },
@@ -743,22 +743,22 @@
       "abilities": [
         "Static"
       ],
-      "weakness": "Ground",
+      "weakness": "Poison",
       "type": [
         "electric"
       ],
       "ThumbnailAltText": "Raichu",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/026.png",
-      "inventory": 10,
-      "price": "$63.00",
-      "resistance": "Water",
+      "inventory": 6,
+      "price": "26.00",
+      "resistance": "Electric",
       "resistanceAmount": 30,
-      "retreatCost": 3,
-      "hitPoints": 71,
+      "retreatCost": 0,
+      "hitPoints": 65,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 20,
-      "abilityIconAmount": 3,
+      "abilityStrength": 80,
+      "abilityIconAmount": 2,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 26
     },
@@ -771,22 +771,22 @@
       "abilities": [
         "Sand Veil"
       ],
-      "weakness": "Poison",
+      "weakness": "Rock",
       "type": [
         "ground"
       ],
       "ThumbnailAltText": "Sandshrew",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/027.png",
-      "inventory": 2,
-      "price": "$62.00",
-      "resistance": "Ice",
-      "resistanceAmount": 10,
-      "retreatCost": 1,
-      "hitPoints": 112,
+      "inventory": 13,
+      "price": "37.00",
+      "resistance": "Rock",
+      "resistanceAmount": 40,
+      "retreatCost": 0,
+      "hitPoints": 75,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
       "abilityStrength": 20,
-      "abilityIconAmount": 2,
+      "abilityIconAmount": 3,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 27
     },
@@ -799,82 +799,54 @@
       "abilities": [
         "Sand Veil"
       ],
-      "weakness": "Electric",
+      "weakness": "Water",
       "type": [
         "ground"
       ],
       "ThumbnailAltText": "Sandslash",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/028.png",
-      "inventory": 2,
-      "price": "$29.00",
-      "resistance": "Electric",
-      "resistanceAmount": 40,
+      "inventory": 11,
+      "price": "32.00",
+      "resistance": "Psychic",
+      "resistanceAmount": 20,
       "retreatCost": 1,
-      "hitPoints": 117,
+      "hitPoints": 41,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 30,
-      "abilityIconAmount": 2,
+      "abilityStrength": 90,
+      "abilityIconAmount": 4,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 28
     },
     {
-      "number": "029",
-      "name": "Nidoran♀",
-      "slug": "nidoran-female",
-      "weight": 7,
-      "height": 0.4,
+      "number": "034",
+      "name": "Nidoking",
+      "slug": "nidoking",
+      "weight": 62,
+      "height": 1.4,
       "abilities": [
         "Poison Point",
         "Rivalry"
       ],
-      "weakness": "Flying",
+      "weakness": "Bug",
       "type": [
-        "poison"
+        "poison",
+        "ground"
       ],
-      "ThumbnailAltText": "Nidoran♀",
-      "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/029.png",
-      "inventory": 13,
-      "price": "$10.00",
-      "resistance": "Fire",
-      "resistanceAmount": 30,
-      "retreatCost": 1,
-      "hitPoints": 75,
+      "ThumbnailAltText": "Nidoking",
+      "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/034.png",
+      "inventory": 20,
+      "price": "98.00",
+      "resistance": "Ice",
+      "resistanceAmount": 10,
+      "retreatCost": 2,
+      "hitPoints": 83,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 30,
-      "abilityIconAmount": 4,
+      "abilityStrength": 90,
+      "abilityIconAmount": 1,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 29
-    },
-    {
-      "number": "032",
-      "name": "Nidoran♂",
-      "slug": "nidoran-male",
-      "weight": 9,
-      "height": 0.5,
-      "abilities": [
-        "Poison Point",
-        "Rivalry"
-      ],
-      "weakness": "Flying",
-      "type": [
-        "poison"
-      ],
-      "ThumbnailAltText": "Nidoran♂",
-      "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/032.png",
-      "inventory": 14,
-      "price": "$74.00",
-      "resistance": "Flying",
-      "resistanceAmount": 30,
-      "retreatCost": 1,
-      "hitPoints": 42,
-      "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
-      "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 20,
-      "abilityIconAmount": 2,
-      "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 30
     },
     {
       "number": "030",
@@ -886,24 +858,24 @@
         "Poison Point",
         "Rivalry"
       ],
-      "weakness": "Rock",
+      "weakness": "Electric",
       "type": [
         "poison"
       ],
       "ThumbnailAltText": "Nidorina",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/030.png",
-      "inventory": 5,
-      "price": "$65.00",
-      "resistance": "Psychic",
-      "resistanceAmount": 50,
-      "retreatCost": 1,
-      "hitPoints": 42,
+      "inventory": 18,
+      "price": "6.00",
+      "resistance": "Ice",
+      "resistanceAmount": 20,
+      "retreatCost": 0,
+      "hitPoints": 111,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 20,
-      "abilityIconAmount": 2,
+      "abilityStrength": 40,
+      "abilityIconAmount": 1,
       "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 31
+      "id": 30
     },
     {
       "number": "031",
@@ -922,46 +894,18 @@
       ],
       "ThumbnailAltText": "Nidoqueen",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/031.png",
-      "inventory": 20,
-      "price": "$64.00",
+      "inventory": 1,
+      "price": "99.00",
       "resistance": "Electric",
-      "resistanceAmount": 20,
-      "retreatCost": 3,
-      "hitPoints": 83,
+      "resistanceAmount": 10,
+      "retreatCost": 2,
+      "hitPoints": 22,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 20,
-      "abilityIconAmount": 1,
+      "abilityStrength": 70,
+      "abilityIconAmount": 4,
       "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 32
-    },
-    {
-      "number": "037",
-      "name": "Vulpix",
-      "slug": "vulpix",
-      "weight": 9.9,
-      "height": 0.6,
-      "abilities": [
-        "Flash Fire"
-      ],
-      "weakness": "Rock",
-      "type": [
-        "fire"
-      ],
-      "ThumbnailAltText": "Vulpix",
-      "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/037.png",
-      "inventory": 12,
-      "price": "$21.00",
-      "resistance": "Fire",
-      "resistanceAmount": 40,
-      "retreatCost": 3,
-      "hitPoints": 73,
-      "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
-      "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 10,
-      "abilityIconAmount": 2,
-      "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 33
+      "id": 31
     },
     {
       "number": "033",
@@ -973,54 +917,24 @@
         "Poison Point",
         "Rivalry"
       ],
-      "weakness": "Fire",
+      "weakness": "Poison",
       "type": [
         "poison"
       ],
       "ThumbnailAltText": "Nidorino",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/033.png",
-      "inventory": 20,
-      "price": "$83.00",
-      "resistance": "Water",
-      "resistanceAmount": 20,
-      "retreatCost": 2,
-      "hitPoints": 40,
+      "inventory": 11,
+      "price": "98.00",
+      "resistance": "Flying",
+      "resistanceAmount": 50,
+      "retreatCost": 0,
+      "hitPoints": 80,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 40,
-      "abilityIconAmount": 4,
+      "abilityStrength": 90,
+      "abilityIconAmount": 3,
       "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 34
-    },
-    {
-      "number": "034",
-      "name": "Nidoking",
-      "slug": "nidoking",
-      "weight": 62,
-      "height": 1.4,
-      "abilities": [
-        "Poison Point",
-        "Rivalry"
-      ],
-      "weakness": "Poison",
-      "type": [
-        "poison",
-        "ground"
-      ],
-      "ThumbnailAltText": "Nidoking",
-      "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/034.png",
-      "inventory": 3,
-      "price": "$35.00",
-      "resistance": "Poison",
-      "resistanceAmount": 10,
-      "retreatCost": 3,
-      "hitPoints": 104,
-      "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
-      "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 20,
-      "abilityIconAmount": 1,
-      "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 35
+      "id": 32
     },
     {
       "number": "035",
@@ -1032,24 +946,24 @@
         "Cute Charm",
         "Magic Guard"
       ],
-      "weakness": "Ice",
+      "weakness": "Fire",
       "type": [
         "fairy"
       ],
       "ThumbnailAltText": "Clefairy",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/035.png",
-      "inventory": 15,
-      "price": "$74.00",
-      "resistance": "Ground",
-      "resistanceAmount": 20,
+      "inventory": 4,
+      "price": "47.00",
+      "resistance": "Electric",
+      "resistanceAmount": 40,
       "retreatCost": 0,
-      "hitPoints": 86,
+      "hitPoints": 104,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 10,
+      "abilityStrength": 90,
       "abilityIconAmount": 4,
       "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 36
+      "id": 33
     },
     {
       "number": "036",
@@ -1061,22 +975,108 @@
         "Cute Charm",
         "Magic Guard"
       ],
-      "weakness": "Flying",
+      "weakness": "Ice",
       "type": [
         "fairy"
       ],
       "ThumbnailAltText": "Clefable",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/036.png",
-      "inventory": 9,
-      "price": "$20.00",
-      "resistance": "Psychic",
-      "resistanceAmount": 20,
-      "retreatCost": 0,
-      "hitPoints": 73,
+      "inventory": 18,
+      "price": "72.00",
+      "resistance": "Electric",
+      "resistanceAmount": 10,
+      "retreatCost": 3,
+      "hitPoints": 40,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 20,
+      "abilityStrength": 80,
+      "abilityIconAmount": 4,
+      "flavorText": "This project was a blast and my teammates are awesome!",
+      "id": 34
+    },
+    {
+      "number": "037",
+      "name": "Vulpix",
+      "slug": "vulpix",
+      "weight": 9.9,
+      "height": 0.6,
+      "abilities": [
+        "Flash Fire"
+      ],
+      "weakness": "Fire",
+      "type": [
+        "fire"
+      ],
+      "ThumbnailAltText": "Vulpix",
+      "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/037.png",
+      "inventory": 10,
+      "price": "79.00",
+      "resistance": "Flying",
+      "resistanceAmount": 20,
+      "retreatCost": 2,
+      "hitPoints": 69,
+      "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
+      "abilitiesText": "Much shorter random text to fill up card space.",
+      "abilityStrength": 50,
+      "abilityIconAmount": 4,
+      "flavorText": "This project was a blast and my teammates are awesome!",
+      "id": 35
+    },
+    {
+      "number": "041",
+      "name": "Zubat",
+      "slug": "zubat",
+      "weight": 7.5,
+      "height": 0.8,
+      "abilities": [
+        "Inner Focus"
+      ],
+      "weakness": "Fire",
+      "type": [
+        "poison",
+        "flying"
+      ],
+      "ThumbnailAltText": "Zubat",
+      "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/041.png",
+      "inventory": 13,
+      "price": "17.00",
+      "resistance": "Ice",
+      "resistanceAmount": 40,
+      "retreatCost": 1,
+      "hitPoints": 108,
+      "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
+      "abilitiesText": "Much shorter random text to fill up card space.",
+      "abilityStrength": 70,
       "abilityIconAmount": 1,
+      "flavorText": "This project was a blast and my teammates are awesome!",
+      "id": 36
+    },
+    {
+      "number": "043",
+      "name": "Oddish",
+      "slug": "oddish",
+      "weight": 5.4,
+      "height": 0.5,
+      "abilities": [
+        "Chlorophyll"
+      ],
+      "weakness": "Electric",
+      "type": [
+        "grass",
+        "poison"
+      ],
+      "ThumbnailAltText": "Oddish",
+      "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/043.png",
+      "inventory": 17,
+      "price": "1.00",
+      "resistance": "Psychic",
+      "resistanceAmount": 10,
+      "retreatCost": 2,
+      "hitPoints": 58,
+      "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
+      "abilitiesText": "Much shorter random text to fill up card space.",
+      "abilityStrength": 70,
+      "abilityIconAmount": 2,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 37
     },
@@ -1089,22 +1089,22 @@
       "abilities": [
         "Flash Fire"
       ],
-      "weakness": "Flying",
+      "weakness": "Bug",
       "type": [
         "fire"
       ],
       "ThumbnailAltText": "Ninetales",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/038.png",
-      "inventory": 14,
-      "price": "$24.00",
-      "resistance": "Electric",
-      "resistanceAmount": 30,
+      "inventory": 20,
+      "price": "55.00",
+      "resistance": "Rock",
+      "resistanceAmount": 50,
       "retreatCost": 0,
-      "hitPoints": 90,
+      "hitPoints": 40,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 60,
-      "abilityIconAmount": 3,
+      "abilityStrength": 70,
+      "abilityIconAmount": 2,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 38
     },
@@ -1118,83 +1118,25 @@
         "Competitive",
         "Cute Charm"
       ],
-      "weakness": "Rock",
+      "weakness": "Ice",
       "type": [
         "normal",
         "fairy"
       ],
       "ThumbnailAltText": "Jigglypuff",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/039.png",
-      "inventory": 11,
-      "price": "$72.00",
-      "resistance": "Ice",
-      "resistanceAmount": 50,
-      "retreatCost": 1,
-      "hitPoints": 69,
-      "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
-      "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 20,
-      "abilityIconAmount": 4,
-      "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 39
-    },
-    {
-      "number": "043",
-      "name": "Oddish",
-      "slug": "oddish",
-      "weight": 5.4,
-      "height": 0.5,
-      "abilities": [
-        "Chlorophyll"
-      ],
-      "weakness": "Ground",
-      "type": [
-        "grass",
-        "poison"
-      ],
-      "ThumbnailAltText": "Oddish",
-      "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/043.png",
-      "inventory": 1,
-      "price": "$91.00",
-      "resistance": "Bug",
+      "inventory": 14,
+      "price": "35.00",
+      "resistance": "Electric",
       "resistanceAmount": 20,
-      "retreatCost": 1,
-      "hitPoints": 62,
+      "retreatCost": 3,
+      "hitPoints": 114,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
       "abilityStrength": 100,
-      "abilityIconAmount": 1,
-      "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 40
-    },
-    {
-      "number": "044",
-      "name": "Gloom",
-      "slug": "gloom",
-      "weight": 8.6,
-      "height": 0.8,
-      "abilities": [
-        "Chlorophyll"
-      ],
-      "weakness": "Psychic",
-      "type": [
-        "grass",
-        "poison"
-      ],
-      "ThumbnailAltText": "Gloom",
-      "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/044.png",
-      "inventory": 4,
-      "price": "$60.00",
-      "resistance": "Ice",
-      "resistanceAmount": 50,
-      "retreatCost": 1,
-      "hitPoints": 117,
-      "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
-      "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 40,
       "abilityIconAmount": 2,
       "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 41
+      "id": 39
     },
     {
       "number": "040",
@@ -1206,54 +1148,25 @@
         "Competitive",
         "Cute Charm"
       ],
-      "weakness": "Ground",
+      "weakness": "Flying",
       "type": [
         "normal",
         "fairy"
       ],
       "ThumbnailAltText": "Wigglytuff",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/040.png",
-      "inventory": 15,
-      "price": "$11.00",
-      "resistance": "Flying",
-      "resistanceAmount": 10,
-      "retreatCost": 0,
-      "hitPoints": 85,
+      "inventory": 1,
+      "price": "50.00",
+      "resistance": "Ground",
+      "resistanceAmount": 40,
+      "retreatCost": 3,
+      "hitPoints": 20,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
       "abilityStrength": 30,
-      "abilityIconAmount": 4,
-      "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 42
-    },
-    {
-      "number": "041",
-      "name": "Zubat",
-      "slug": "zubat",
-      "weight": 7.5,
-      "height": 0.8,
-      "abilities": [
-        "Inner Focus"
-      ],
-      "weakness": "Water",
-      "type": [
-        "poison",
-        "flying"
-      ],
-      "ThumbnailAltText": "Zubat",
-      "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/041.png",
-      "inventory": 7,
-      "price": "$95.00",
-      "resistance": "Flying",
-      "resistanceAmount": 50,
-      "retreatCost": 3,
-      "hitPoints": 112,
-      "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
-      "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 80,
       "abilityIconAmount": 3,
       "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 43
+      "id": 40
     },
     {
       "number": "042",
@@ -1264,25 +1177,54 @@
       "abilities": [
         "Inner Focus"
       ],
-      "weakness": "Flying",
+      "weakness": "Ice",
       "type": [
         "poison",
         "flying"
       ],
       "ThumbnailAltText": "Golbat",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/042.png",
-      "inventory": 6,
-      "price": "$24.00",
-      "resistance": "Water",
-      "resistanceAmount": 20,
+      "inventory": 14,
+      "price": "43.00",
+      "resistance": "Ground",
+      "resistanceAmount": 40,
       "retreatCost": 2,
-      "hitPoints": 95,
+      "hitPoints": 49,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 100,
+      "abilityStrength": 90,
       "abilityIconAmount": 4,
       "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 44
+      "id": 41
+    },
+    {
+      "number": "044",
+      "name": "Gloom",
+      "slug": "gloom",
+      "weight": 8.6,
+      "height": 0.8,
+      "abilities": [
+        "Chlorophyll"
+      ],
+      "weakness": "Poison",
+      "type": [
+        "grass",
+        "poison"
+      ],
+      "ThumbnailAltText": "Gloom",
+      "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/044.png",
+      "inventory": 9,
+      "price": "7.00",
+      "resistance": "Bug",
+      "resistanceAmount": 30,
+      "retreatCost": 2,
+      "hitPoints": 36,
+      "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
+      "abilitiesText": "Much shorter random text to fill up card space.",
+      "abilityStrength": 80,
+      "abilityIconAmount": 3,
+      "flavorText": "This project was a blast and my teammates are awesome!",
+      "id": 42
     },
     {
       "number": "045",
@@ -1293,25 +1235,25 @@
       "abilities": [
         "Chlorophyll"
       ],
-      "weakness": "Water",
+      "weakness": "Electric",
       "type": [
         "grass",
         "poison"
       ],
       "ThumbnailAltText": "Vileplume",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/045.png",
-      "inventory": 15,
-      "price": "$80.00",
-      "resistance": "Rock",
-      "resistanceAmount": 10,
+      "inventory": 11,
+      "price": "61.00",
+      "resistance": "Fire",
+      "resistanceAmount": 40,
       "retreatCost": 3,
-      "hitPoints": 98,
+      "hitPoints": 100,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 90,
-      "abilityIconAmount": 4,
+      "abilityStrength": 70,
+      "abilityIconAmount": 1,
       "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 45
+      "id": 43
     },
     {
       "number": "046",
@@ -1323,25 +1265,25 @@
         "Dry Skin",
         "Effect Spore"
       ],
-      "weakness": "Bug",
+      "weakness": "Ice",
       "type": [
         "bug",
         "grass"
       ],
       "ThumbnailAltText": "Paras",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/046.png",
-      "inventory": 18,
-      "price": "$69.00",
-      "resistance": "Ground",
-      "resistanceAmount": 50,
-      "retreatCost": 2,
-      "hitPoints": 49,
+      "inventory": 3,
+      "price": "48.00",
+      "resistance": "Poison",
+      "resistanceAmount": 20,
+      "retreatCost": 3,
+      "hitPoints": 112,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 10,
-      "abilityIconAmount": 4,
+      "abilityStrength": 30,
+      "abilityIconAmount": 1,
       "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 46
+      "id": 44
     },
     {
       "number": "050",
@@ -1359,18 +1301,47 @@
       ],
       "ThumbnailAltText": "Diglett",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/050.png",
-      "inventory": 13,
-      "price": "$16.00",
-      "resistance": "Rock",
-      "resistanceAmount": 40,
-      "retreatCost": 2,
-      "hitPoints": 26,
+      "inventory": 15,
+      "price": "93.00",
+      "resistance": "Water",
+      "resistanceAmount": 50,
+      "retreatCost": 1,
+      "hitPoints": 64,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 20,
-      "abilityIconAmount": 4,
+      "abilityStrength": 50,
+      "abilityIconAmount": 1,
       "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 47
+      "id": 45
+    },
+    {
+      "number": "051",
+      "name": "Dugtrio",
+      "slug": "dugtrio",
+      "weight": 33.3,
+      "height": 0.7,
+      "abilities": [
+        "Arena Trap",
+        "Sand Veil"
+      ],
+      "weakness": "Electric",
+      "type": [
+        "ground"
+      ],
+      "ThumbnailAltText": "Dugtrio",
+      "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/051.png",
+      "inventory": 5,
+      "price": "28.00",
+      "resistance": "Psychic",
+      "resistanceAmount": 20,
+      "retreatCost": 0,
+      "hitPoints": 57,
+      "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
+      "abilitiesText": "Much shorter random text to fill up card space.",
+      "abilityStrength": 70,
+      "abilityIconAmount": 1,
+      "flavorText": "This project was a blast and my teammates are awesome!",
+      "id": 46
     },
     {
       "number": "047",
@@ -1390,17 +1361,17 @@
       "ThumbnailAltText": "Parasect",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/047.png",
       "inventory": 4,
-      "price": "$62.00",
-      "resistance": "Fire",
-      "resistanceAmount": 50,
+      "price": "51.00",
+      "resistance": "Ground",
+      "resistanceAmount": 10,
       "retreatCost": 1,
-      "hitPoints": 41,
+      "hitPoints": 118,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 50,
+      "abilityStrength": 90,
       "abilityIconAmount": 3,
       "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 48
+      "id": 47
     },
     {
       "number": "048",
@@ -1412,25 +1383,25 @@
         "Compound Eyes",
         "Tinted Lens"
       ],
-      "weakness": "Ice",
+      "weakness": "Fire",
       "type": [
         "bug",
         "poison"
       ],
       "ThumbnailAltText": "Venonat",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/048.png",
-      "inventory": 4,
-      "price": "$55.00",
-      "resistance": "Ground",
-      "resistanceAmount": 40,
+      "inventory": 16,
+      "price": "96.00",
+      "resistance": "Flying",
+      "resistanceAmount": 30,
       "retreatCost": 1,
-      "hitPoints": 45,
+      "hitPoints": 94,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 90,
-      "abilityIconAmount": 2,
+      "abilityStrength": 50,
+      "abilityIconAmount": 1,
       "flavorText": "This project was a blast and my teammates are awesome!",
-      "id": 49
+      "id": 48
     },
     {
       "number": "049",
@@ -1442,22 +1413,51 @@
         "Shield Dust",
         "Tinted Lens"
       ],
-      "weakness": "Poison",
+      "weakness": "Rock",
       "type": [
         "bug",
         "poison"
       ],
       "ThumbnailAltText": "Venomoth",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/049.png",
-      "inventory": 16,
-      "price": "$21.00",
-      "resistance": "Poison",
-      "resistanceAmount": 30,
-      "retreatCost": 1,
-      "hitPoints": 26,
+      "inventory": 4,
+      "price": "63.00",
+      "resistance": "Electric",
+      "resistanceAmount": 40,
+      "retreatCost": 3,
+      "hitPoints": 34,
       "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
       "abilitiesText": "Much shorter random text to fill up card space.",
-      "abilityStrength": 50,
+      "abilityStrength": 90,
+      "abilityIconAmount": 1,
+      "flavorText": "This project was a blast and my teammates are awesome!",
+      "id": 49
+    },
+    {
+      "number": "052",
+      "name": "Meowth",
+      "slug": "meowth",
+      "weight": 4.2,
+      "height": 0.4,
+      "abilities": [
+        "Pickup",
+        "Technician"
+      ],
+      "weakness": "Ground",
+      "type": [
+        "normal"
+      ],
+      "ThumbnailAltText": "Meowth",
+      "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/052.png",
+      "inventory": 19,
+      "price": "80.00",
+      "resistance": "Water",
+      "resistanceAmount": 40,
+      "retreatCost": 0,
+      "hitPoints": 80,
+      "powerText": "This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.",
+      "abilitiesText": "Much shorter random text to fill up card space.",
+      "abilityStrength": 60,
       "abilityIconAmount": 2,
       "flavorText": "This project was a blast and my teammates are awesome!",
       "id": 50
@@ -2040,26 +2040,6 @@
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/028.png"
     },
     {
-      "number": "029",
-      "name": "Nidoran♀",
-      "slug": "nidoran-female",
-      "weight": 7,
-      "height": 0.4,
-      "abilities": [
-        "Poison Point",
-        "Rivalry"
-      ],
-      "weakness": [
-        "Psychic",
-        "Ground"
-      ],
-      "type": [
-        "poison"
-      ],
-      "ThumbnailAltText": "Nidoran♀",
-      "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/029.png"
-    },
-    {
       "number": "030",
       "name": "Nidorina",
       "slug": "nidorina",
@@ -2101,26 +2081,6 @@
       ],
       "ThumbnailAltText": "Nidoqueen",
       "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/031.png"
-    },
-    {
-      "number": "032",
-      "name": "Nidoran♂",
-      "slug": "nidoran-male",
-      "weight": 9,
-      "height": 0.5,
-      "abilities": [
-        "Poison Point",
-        "Rivalry"
-      ],
-      "weakness": [
-        "Psychic",
-        "Ground"
-      ],
-      "type": [
-        "poison"
-      ],
-      "ThumbnailAltText": "Nidoran♂",
-      "ThumbnailImage": "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/032.png"
     },
     {
       "number": "033",
