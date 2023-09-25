@@ -1,0 +1,99 @@
+/* fonts */
+
+/* light mode */
+body {
+  --bg-color: #eeeeee;
+  --main-txt-color: #222222;
+
+  --accent-color: #1e90ff;
+
+  background: var(--bg-color);
+}
+/* dark mode */
+body.dark {
+  --bg-color: #333333;
+  --main-txt-color: #ffffff;
+
+  background: var(--bg-color);
+}
+
+/* icons */
+.icon {
+  color: var(--main-txt-color);
+  font-size: 2em;
+}
+
+/* hide */
+.hide {
+  display: none;
+}
+
+/* nav-bar */
+nav {
+  height: 10vh;
+  border-bottom: 3px solid var(--main-txt-color);
+}
+
+/* main section */
+main {
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+/* table component */
+#table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid yellow;
+}
+#table-container > table {
+  border-collapse: collapse;
+  width: 90%;
+  border: 2px solid var(--main-txt-color);
+}
+.scale {
+  transform: scale(1.02);
+  transition: all 0.2s linear;
+}
+
+/* card component */
+#card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid green;
+}
+#card {
+  height: 70%;
+  width: 50%;
+  border: 5px solid rgb(255, 236, 80);
+  border-radius: 5px;
+}
+
+/* modal component */
+#modal-container {
+  display: none;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+#modal {
+  height: 60%;
+  width: 60%;
+  background: #fff;
+  border: 2px solid red;
+}
+
+/* footer */
+footer {
+  height: 10vh;
+  border-top: 3px solid var(--main-txt-color);
+}
