@@ -42,7 +42,7 @@ main {
 }
 
 /* table component */
-#table-container {
+/* #table-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,6 +56,22 @@ main {
 .scale {
   transform: scale(1.02);
   transition: all 0.2s linear;
+} */
+
+#table-container {
+  width: 485px;
+  border-right: 2px solid;
+  height: 80vh;
+  overflow: scroll;
+}
+
+td img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+tr {
+  border-radius: 10px;
 }
 
 /* card component */
