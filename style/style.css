@@ -55,7 +55,7 @@ main {
 }
 .scale {
   transform: scale(1.02);
-  border: 1px solid black;
+  transition: all 0.2s linear;
 }
 
 /* card component */
