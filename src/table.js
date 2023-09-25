@@ -30,10 +30,7 @@ const displayPokemonTable = (pokemonArray) => {
     const pokemonType = document.createElement('td')
     const cardQty = document.createElement('td')
     const cardPrice = document.createElement('td')
-    if (pokemon.type === 'fire') {
-      pokemonItem.className = 'class-danger'
-      
-    }
+    
     pokemonImg.src = pokemon.ThumbnailImage
     pokemonName.textContent = pokemon.name
     pokemonIndex.textContent = pokemon.number
@@ -41,6 +38,9 @@ const displayPokemonTable = (pokemonArray) => {
     pokemonImg.src = pokemon.ThumbnailImage
     cardQty.textContent = '0'
     cardPrice.textContent = '$0.00'
+    if (pokemon.type[0] === 'grass') {
+      pokemonItem.classList.add('table-success')
+    }
     pokemonImgData.append(pokemonImg)
     pokemonItem.append(pokemonIndex, pokemonImgData, pokemonName, pokemonType, cardQty, cardPrice)
     pokemonTable.append(pokemonItem)
