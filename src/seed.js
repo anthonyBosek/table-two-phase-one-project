@@ -1,4 +1,5 @@
 /* Global Variables */
+// const pokemonUrl = "http://localhost:3000/pokemon?_limit=25";
 const pokemonUrl = "http://localhost:3000/pokemon?_limit=50";
 const postPokemonUrl = "http://localhost:3000/inventory"
 const weaknessArray = ["Bug", "Poison", "Fire", "Psychic", "Flying", "Ice",  "Water", "Ground", "Rock", "Electric"];
