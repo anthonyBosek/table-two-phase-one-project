@@ -73,17 +73,38 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
-  border-right: 1px solid var(--accent-clr);
+  /* width: 485px; */
+  /* border-right: 2px solid; */
+  height: 80vh;
+  overflow: overlay;
 }
-#table-container > table {
-  border-collapse: collapse;
-  width: 90%;
-  /* border: 2px solid var(--main-txt-color); */
+
+.table thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
-.scale {
+
+thead {
+  opacity: 75%;
+}
+thead:hover {
+  transform: none;
+}
+
+td img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+tbody tr:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
   transform: scale(1.02);
-  transition: all 0.2s linear;
+  align-items: center;
+}
+img:hover {
+  transform: scale(3);
 }
 
 /* card component */

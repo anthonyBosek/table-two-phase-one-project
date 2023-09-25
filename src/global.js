@@ -1,5 +1,5 @@
 // Global Variables
-const URL = "http://localhost:3000/pokemon";
+const URL = "http://localhost:3000/inventory";
 // Table Variables
 const pokemonTable = document.querySelector("#table-body");
 const pokemonItem = document.createElement("tr");
