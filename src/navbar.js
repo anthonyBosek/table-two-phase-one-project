@@ -1,4 +1,7 @@
 // Search Bar Functionality
+search.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
 
 // Light/Dark Mode Toggle
 mode.addEventListener("click", (e) => {
