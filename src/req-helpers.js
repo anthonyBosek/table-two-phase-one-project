@@ -1,4 +1,4 @@
-// universal fetch helper functions
+// Universal fetch Helper Functions
 const getJSON = (url) => {
   return fetch(url).then((resp) => {
     if (resp.ok) {

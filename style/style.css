@@ -6,7 +6,7 @@ body {
   --bg-color: #f5f5f5;
   --primary-color: #fafafa;
   --main-txt-color: #212121;
-  --second-txt-clr: #757575;
+  --second-txt-color: #757575;
 
   --accent-clr: #1e90ff;
   --accent-clr-2: #bbddff;
@@ -82,6 +82,7 @@ nav {
 #dropdown-content > li {
   text-decoration: none;
   padding: 6px 8px;
+  color: #333;
   border-bottom: 1px solid #333;
   cursor: pointer;
 }
@@ -103,7 +104,6 @@ main {
   min-width: 775px;
   height: 76vh;
   overflow-y: scroll;
-  overflow-x: hidden;
   scrollbar-width: thin;
   border-right: 2px solid var(--main-txt-color);
 }
@@ -130,13 +130,11 @@ td img {
 }
 
 .scale {
-  background-color: #f5f5f5;
   cursor: pointer;
-  transform: scale(1.02);
-  align-items: center;
+  transform: scale(1.025);
 }
 .img-scale {
-  transform: scale(3);
+  transform: scale(3.25);
 }
 
 /* backgrounds */
@@ -243,6 +241,7 @@ td img {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
 }
 #modal {
   height: 60%;

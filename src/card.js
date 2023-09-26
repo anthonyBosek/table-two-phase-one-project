@@ -50,26 +50,28 @@ const createCard = (pokemonObj) => {
 
   const hr1 = document.createElement("hr");
   const hr2 = document.createElement("hr");
-  card.append(cardHeader, cardImg, cardVitals, cardPower, hr1, cardAbility, hr2);
 
+  card.append(
+    cardHeader,
+    cardImg,
+    cardVitals,
+    cardPower,
+    hr1,
+    cardAbility,
+    hr2
+  );
 };
 
-//
-// Card HTML Example
-// <div id="card">
-// <div>
-//   <span id="card-title">Pikachu</span>
-//   <span id="card-subtitle">120 HP</span>
-// </div>
-// <div id="card-img">
-//   <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png" alt="test">
-// </div>
-// <div id="card-vitals">
-//   <span>Height: 6-1</span>
-//   <span>Weight: 200</span>
-// </div>
-// <p id="card-power">This is just some random generic text intended to fill up space on the card while it displays on the page. Hopefully, no one will actually read this too closely, but if they do maybe they will not comment on it.</p>
-// <hr>
-// <p id="card-ability">Much shorter random text to fill up card space.</p>
-// <hr>
-// </div>
+const addCardToCart = (e) => {
+  e.preventDefault();
+  const qty = parseInt(e.target["card-qty"].value);
+  const poke = document.getElementById("card-title").innerText;
+  if (!userData.items[poke]) {
+    userData.items[poke] = qty;
+  } else {
+    userData.items[poke] += qty;
+  }
+  addToCart.reset();
+};
+
+addToCart.addEventListener("submit", addCardToCart);

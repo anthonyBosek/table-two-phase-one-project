@@ -17,7 +17,7 @@ const displayPokemonTable = (pokemonArray) => {
     pokemonImg.alt = pokemon.name;
     pokemonName.textContent = pokemon.name;
     pokemonIndex.textContent = pokemon.number;
-    pokemonType.textContent = pokemon.type[0];
+    pokemonType.textContent = pokemon.type.join(", ");
     cardQty.textContent =
       pokemon.inventory === 0 ? "Out of Stock" : pokemon.inventory;
     cardPrice.textContent = `$${pokemon.price}`;
@@ -28,9 +28,9 @@ const displayPokemonTable = (pokemonArray) => {
       pokemonItem.classList.add("table-danger");
     } else if (pokemon.type[0] === "water" || pokemon.type[0] === "ice") {
       pokemonItem.classList.add("table-info");
-    } else if (pokemon.type[0] === "electric") {
+    } else if (pokemon.type[0] === "electric" || pokemon.type[0] === "normal") {
       pokemonItem.classList.add("table-warning");
-    } else if (pokemon.type[0] === "poison") {
+    } else if (pokemon.type[0] === "poison" || pokemon.type[0] === "bug") {
       pokemonItem.classList.add("table-primary");
     } else if (pokemon.type[0] === "ground" || pokemon.type[0] === "rock") {
       pokemonItem.classList.add("table-secondary");
