@@ -139,14 +139,61 @@ td img {
 /* card component */
 #card-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  flex-direction: column;
 }
 #card {
   height: 70%;
   width: 50%;
+  background: green;
+  border: 10px solid rgb(255, 236, 80);
+  border-radius: 10px;
+  padding: 0 20px;
+  box-shadow: 6px 6px 14px black;
+}
+#card-title {
+  margin: 10px 0 10px 20%;
+  font-size: 3em;
+}
+#card-subtitle {
+  margin: 10px 0 10px 15%;
+  font-size: 2em;
+  color: red;
+}
+#card-img {
+  height: 30%;
+  max-width: 80%;
   border: 5px solid rgb(255, 236, 80);
-  border-radius: 5px;
+  background: blue;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 4px 4px 8px black;
+}
+#card-vitals {
+  max-width: 80%;
+  margin: 10px auto;
+  background: goldenrod;
+  text-align: center;
+}
+
+#card-power {
+  margin: 40px;
+  text-align: left;
+}
+#card-ability {
+  margin: 40px;
+  text-align: left;
+}
+#card hr {
+  /* background-color: black;
+  border: 2px solid; */
+  height: 3px;
+  background: black;
+}
+#card-qty {
+  width: 60px;
+  margin-bottom: 40px;
 }
 
 /* modal component */
@@ -187,13 +234,17 @@ td img {
   opacity: 1;
 }
 
-#modal h2, #modal h4 {
+#modal h2,
+#modal h4 {
   margin-bottom: 0;
   display: flex;
   justify-content: space-between;
 }
 
-#modal h2, #modal h4, #modal th, #modal td {
+#modal h2,
+#modal h4,
+#modal th,
+#modal td {
   padding: 10px;
 }
 
