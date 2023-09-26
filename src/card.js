@@ -1,5 +1,6 @@
 const createCard = (pokemonObj) => {
   card.innerHTML = "";
+  
   const cardHeader = document.createElement("div");
   cardHeader.id = "card-header";
   const cardTitle = document.createElement("span");
@@ -37,6 +38,7 @@ const createCard = (pokemonObj) => {
   const hr2 = document.createElement("hr");
 
   card.append(cardHeader, cardImg, cardVitals, cardPower, hr1, cardAbility, hr2);
+
 };
 
 //
