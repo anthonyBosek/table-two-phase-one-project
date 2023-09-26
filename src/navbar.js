@@ -16,9 +16,7 @@ search.addEventListener("submit", (e) => {
 // Light/Dark Mode Toggle
 mode.addEventListener("click", (e) => {
   document.body.classList.toggle("dark");
-  document
-    .querySelector("#table-container > table")
-    .classList.toggle("table-dark");
+  document.querySelector("#box > table").classList.toggle("table-dark");
   const icon = e.target;
   if (icon.classList.contains("fa-moon-o")) {
     icon.classList.remove("fa-moon-o");
@@ -45,4 +43,4 @@ window.addEventListener("click", (e) => {
   }
 });
 
-const makeSeachData = (data) => {};
+const searchData = (searchObj) => {};
