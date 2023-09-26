@@ -1,4 +1,11 @@
 // Search Bar Functionality
+getCardData = (id) => {
+  getJSON(`${URL}/${id.split("-")[1]}`)
+    .then((data) => {
+      createCard(data);
+    })
+    .catch((err) => console.log("Error: ", err));
+};
 
 const createDropdown = (data) => {
   // alphabetize data
@@ -16,7 +23,7 @@ const createDropdown = (data) => {
       li.id = `li-${id}`;
       li.textContent = name;
       li.addEventListener("click", (e) => {
-        console.log(e.target.id);
+        getCardData(e.target.id);
         dropdownContent.classList.remove("show");
         search.reset();
       });
