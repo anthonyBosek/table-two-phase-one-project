@@ -14,6 +14,7 @@ body {
   font-family: "Oswald", sans-serif;
   background: var(--bg-color);
   color: var(--main-txt-color);
+  min-width: 300px;
 }
 /* dark mode */
 body.dark {
@@ -33,7 +34,7 @@ nav {
   background: var(--primary-color);
   justify-content: space-between;
   align-items: center;
-  padding: 0 5% 0 15%;
+  padding: 1% 5% 0;
 }
 #header {
   display: flex;
@@ -45,6 +46,7 @@ nav {
   justify-content: flex-end;
   align-items: center;
   width: 40%;
+  min-width: 400px;
 }
 #control-bar > span:nth-child(2) {
   margin: 0 5%;
@@ -89,15 +91,16 @@ nav {
 
 /* main section */
 main {
-  height: 80vh;
-  display: grid;
-  grid-template-columns: 60% 40%;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
 }
 
 /* table component */
 #table-container {
   margin: 25px auto;
-  width: 90%;
+  width: 60%;
+  min-width: 775px;
   height: 76vh;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -142,28 +145,32 @@ td img {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  width: 35%;
+  min-height: 750px;
 }
 #card {
   height: 550px;
-  width: 415px;
+
+  width: 400px;
   background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/81ccfdb7-ac1d-423f-a276-af63abae5ba2/d5oulfh-45f9111f-d787-4040-8609-50e8ce099b31.png/v1/fit/w_430,h_614,q_70,strp/grass__bw__texture_by_pkmncardmaker264_d5oulfh-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjE0IiwicGF0aCI6IlwvZlwvODFjY2ZkYjctYWMxZC00MjNmLWEyNzYtYWY2M2FiYWU1YmEyXC9kNW91bGZoLTQ1ZjkxMTFmLWQ3ODctNDA0MC04NjA5LTUwZThjZTA5OWIzMS5wbmciLCJ3aWR0aCI6Ijw9NDMwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.KhGvu2QKX0z1d5CUobflhVbQuhvPPJ380st6H4Igq5M');
+
   border: 10px solid rgb(255, 236, 80);
   border-radius: 10px;
   padding: 0 20px;
   box-shadow: 6px 6px 14px black;
 }
-
-#card-title {
-  margin: 40px;
+#card-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 27px;
   font-size: 2em;
 }
 #card-subtitle {
-  margin: 40px;
-  font-size: 2em;
+  /* font-size: 2em; */
   color: red;
 }
 #card-img {
-  max-width: 80%;
+  max-width: 83%;
   border: 5px solid rgb(255, 236, 80);
   background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/81ccfdb7-ac1d-423f-a276-af63abae5ba2/d5oujyw-580a0eed-e966-46c3-b46c-19ad3e890981.png/v1/fit/w_429,h_614,q_70,strp/water__bw__texture_by_pkmncardmaker264_d5oujyw-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjE0IiwicGF0aCI6IlwvZlwvODFjY2ZkYjctYWMxZC00MjNmLWEyNzYtYWY2M2FiYWU1YmEyXC9kNW91anl3LTU4MGEwZWVkLWU5NjYtNDZjMy1iNDZjLTE5YWQzZTg5MDk4MS5wbmciLCJ3aWR0aCI6Ijw9NDI5In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.6vfShTuSTxItZrdM2HzCBsDrEkjnNwILQs5R6m6KOpQ');
   margin: 0 auto;
@@ -171,25 +178,25 @@ td img {
   box-shadow: 4px 4px 8px black;
 }
 #card-vitals {
-  max-width: 80%;
+  max-width: 83%;
   margin: 10px auto;
   background: goldenrod;
   text-align: center;
 }
-
-#card-power {
-  margin: 15px;
-  text-align: left;
+#card-vitals span {
+  margin: 10px;
 }
-#card-ability {
-  margin: 15px;
-  text-align: left;
+#card-power, #card-ability {
+  width: 83%;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: .8rem;
 }
 #card hr {
-  /* background-color: black;
-  border: 2px solid; */
+  width: 83%;
   height: 3px;
   background: black;
+  margin: 1rem auto;
 }
 #card-qty {
   width: 60px;
@@ -211,17 +218,22 @@ td img {
 #modal {
   height: 60%;
   width: 60%;
-  background: var(--bg-color);
+  background: #161616;
   padding: 10px;
-  min-width: 320px;
+  min-width: 290px;
   border-radius: 10px;
   overflow: auto;
+  position: relative;
 }
 #modal-close {
-  color: var(--main-txt-color);
+  /* color: var(--main-txt-color); */
   float: right;
   font-size: 2em;
   margin-right: 15px;
+}
+
+#modal, #modal-close {
+  color: #eee
 }
 
 #modal tr {
@@ -246,6 +258,24 @@ td img {
 #modal th,
 #modal td {
   padding: 10px;
+}
+
+#modal form {
+  position: absolute;
+  bottom: 3%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-right: 25px;
+}
+
+#modal-submit {
+  transition: all .2s linear;
+}
+
+#modal-submit:hover {
+  background-color: #b8380d;
+  color: #eee;
 }
 
 .right-border {
@@ -280,4 +310,108 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+
+
+/* ===== media queries ===== */
+
+@media (min-width:1241px) {
+  body {
+    overflow: hidden;
+  }
+  main {
+    padding-right: 15px;
+  }
+}
+
+@media (max-width:1240px) {
+  #table-container {
+    width: 90%;
+    min-width: 0px;
+  }
+}
+
+@media (max-width:767px) and (min-width: 541px) {
+  h1 {
+    font-size: calc(1.375rem + .7vw);
+  }
+  .logo {
+    width: 75px;
+    margin: -4px -20px 0 0;
+  }
+  nav {
+    padding: 1% 3% 0 0;
+  }
+  #control-bar {
+    min-width: 300px;
+  }
+  #search > input:nth-child(1) {
+    width: 150px;
+  }
+  table {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 540px) {
+  h1 {
+    font-size: calc(1.375rem + .7vw);
+  }
+  .logo {
+    width: 75px;
+    margin: -4px -20px 0 0;
+  }
+  nav {
+    flex-direction: column;
+    padding: 1% 3% 5% 0;
+    height: 12vh;
+    justify-content: space-evenly;
+  }
+  #control-bar {
+    min-width: 300px;
+    padding-right: 5px;
+  }
+  #search > input:nth-child(1) {
+    width: 150px;
+  }
+  table {
+    font-size: 10px;
+  }
+  .table>:not(caption)>*>* {
+    padding: 0.5rem 0;
+  }
+  .icon {
+    font-size: 1.5em;
+  }
+  #card-container {
+    width: 100%;
+  }
+  #card {
+    width: 290px;
+    height: 405px;
+  }
+  #card-header {
+    font-size: 1.2em;
+    padding: 4px 18px
+  }
+  #card-img {
+    height: 40%;
+  }
+  #card-img img {
+    width: 80%;
+  }
+  #card-power, #card-ability {
+    font-size: .5em;
+  }
+  #card-vitals {
+    font-size: .6em;
+  }
+  #modal h2 {
+    font-size: calc(1.325rem + 0vw);
+  }
+  #modal h4 {
+    font-size: calc(0.975rem + 0vw);
+    width: 100%;
+  }
 }
