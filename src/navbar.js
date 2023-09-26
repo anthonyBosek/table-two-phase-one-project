@@ -2,6 +2,10 @@
 getCardData = (id) => {
   getJSON(`${URL}/${id.split("-")[1]}`)
     .then((data) => {
+      let isDOD = cardBanner.innerText === "";
+      cardBanner.innerText = isDOD
+        ? "Deal of the Day!"
+        : (cardBanner.innerText = `${data.name} - $${data.price}`);
       createCard(data);
     })
     .catch((err) => console.log("Error: ", err));
