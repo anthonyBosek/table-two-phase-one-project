@@ -1,4 +1,14 @@
 // Search Bar Functionality
+searchInput.addEventListener("focus", () => {
+  searchInput.classList.toggle("focus");
+});
+searchInput.addEventListener("blur", () => {
+  searchInput.classList.toggle("focus");
+});
+searchInput.addEventListener("change", (e) => {
+  let searchValue = e.target.value;
+  console.log(searchValue);
+});
 search.addEventListener("submit", (e) => {
   e.preventDefault();
 });
@@ -34,3 +44,5 @@ window.addEventListener("click", (e) => {
     modalContainer.classList.toggle("hide");
   }
 });
+
+const makeSeachData = (data) => {};
