@@ -11,6 +11,7 @@ const modalClose = document.getElementById("modal-close");
 const modal = document.getElementById("modal");
 const search = document.getElementById("search");
 const searchInput = document.getElementById("search-input");
+const dropdownContent = document.getElementById("dropdown-content");
 const mode = document.getElementById("mode");
 const cart = document.getElementById("cart");
 // Modal Variables
