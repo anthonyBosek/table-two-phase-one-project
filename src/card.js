@@ -1,6 +1,7 @@
 const createCard = (pokemonObj) => {
   card.innerHTML = "";
   const cardHeader = document.createElement("div");
+  cardHeader.id = "card-header";
   const cardTitle = document.createElement("span");
   cardTitle.id = "card-title";
   cardTitle.innerText = pokemonObj.name;
@@ -32,9 +33,10 @@ const createCard = (pokemonObj) => {
   cardAbility.id = "card-ability";
   cardAbility.innerText = pokemonObj.abilitiesText;
 
-  const hr = document.createElement("hr");
+  const hr1 = document.createElement("hr");
+  const hr2 = document.createElement("hr");
 
-  card.append(cardHeader, cardImg, cardVitals, cardPower, hr, cardAbility, hr);
+  card.append(cardHeader, cardImg, cardVitals, cardPower, hr1, cardAbility, hr2);
 };
 
 //
