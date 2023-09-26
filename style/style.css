@@ -144,8 +144,8 @@ td img {
   flex-direction: column;
 }
 #card {
-  height: 70%;
-  width: 50%;
+  height: 550px;
+  width: 415px;
   background: green;
   border: 10px solid rgb(255, 236, 80);
   border-radius: 10px;
@@ -153,8 +153,8 @@ td img {
   box-shadow: 6px 6px 14px black;
 }
 #card-title {
-  margin: 10px 0 10px 20%;
-  font-size: 3em;
+  margin: 40px;
+  font-size: 2em;
 }
 #card-subtitle {
   margin: 10px 0 10px 15%;
@@ -162,7 +162,6 @@ td img {
   color: red;
 }
 #card-img {
-  height: 30%;
   max-width: 80%;
   border: 5px solid rgb(255, 236, 80);
   background: blue;
@@ -178,11 +177,11 @@ td img {
 }
 
 #card-power {
-  margin: 40px;
+  margin: 10px;
   text-align: left;
 }
 #card-ability {
-  margin: 40px;
+  margin: 10px;
   text-align: left;
 }
 #card hr {
