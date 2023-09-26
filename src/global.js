@@ -1,7 +1,10 @@
 // Global Variables
+
+// URL Variables to different endpoints
 const URL = "http://localhost:3000/inventory";
 const USERS_URL = "http://localhost:3000/users";
 const POKEMON_URL = "http://localhost:3000/pokemon";
+
 // Table Variables
 const pokemonTable = document.querySelector("#table-body");
 const selectPriceFilter = document.querySelector("#price-filter");
@@ -9,6 +12,7 @@ const selectQtyFilter = document.querySelector("#qty-filter");
 const selectNameFilter = document.querySelector("#name-filter");
 const filterByNumber = document.querySelector("#number");
 const selectTypeFilter = document.querySelector("#type-filter");
+
 // Nav-Bar Variables
 const tableContainer = document.getElementById("table-container");
 const modalContainer = document.getElementById("modal-container");
@@ -19,11 +23,14 @@ const searchInput = document.getElementById("search-input");
 const dropdownContent = document.getElementById("dropdown-content");
 const mode = document.getElementById("mode");
 const cart = document.getElementById("cart");
+
 // Card Variables
 const card = document.getElementById("card");
+
 // Modal Variables
 let totalPrice = 0;
 let quantity = 0;
+
 // temp data vars
 const userCartData = {
   customerNumber: 10011001,
