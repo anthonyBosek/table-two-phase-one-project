@@ -47,14 +47,13 @@ const userData = {
 
 // Simulated Inventory Data
 const searchObj = {};
-
 const createSearchObj = (pokemonArray) => {
   pokemonArray.forEach((pokemon) => {
     searchObj[pokemon.name] = pokemon.id;
   });
 };
 
-let randomId = Math.floor(Math.random() * 50) + 1;
+let randomId = Math.floor(Math.random() * 50) + 1; // Create random id for Deal of the Day
 const getOnePokemon = (_id = randomId) => {
   getJSON(`${URL}/${_id}`)
     .then((data) => {
