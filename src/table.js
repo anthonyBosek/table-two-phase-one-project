@@ -21,7 +21,8 @@ allRows.forEach((row, i) => {
 
 
 const displayPokemonTable = (pokemonArray) => {
-  pokemonArray.forEach(pokemon => {
+    pokemonTable.innerHTML = ''
+    pokemonArray.forEach(pokemon => {
     const pokemonItem = document.createElement('tr')
     const pokemonName = document.createElement('td') 
     const pokemonImgData = document.createElement('td')
@@ -36,8 +37,8 @@ const displayPokemonTable = (pokemonArray) => {
     pokemonName.textContent = pokemon.name
     pokemonIndex.textContent = pokemon.number
     pokemonType.textContent = pokemon.type
-    cardQty.textContent = '0'
-    cardPrice.textContent = '$0.00'
+    cardQty.textContent = pokemon.inventory
+    cardPrice.textContent = `$${pokemon.price}`
     if (pokemon.type[0] === 'grass' ) {
       pokemonItem.classList.add('table-success')
     } else if (pokemon.type[0] === 'fire' || pokemon.type[0] === 'dragon') {
@@ -54,10 +55,77 @@ const displayPokemonTable = (pokemonArray) => {
     pokemonImgData.append(pokemonImg)
     pokemonItem.append(pokemonIndex, pokemonImgData, pokemonName, pokemonType, cardQty, cardPrice)
     pokemonTable.append(pokemonItem)
-
+    
   })
  
 }
+
+const filterNumber = document.querySelector('.number')
+filterNumber.addEventListener('click', () => fetchData())
+
+
+// const filterPrice = document.querySelector('#price')
+//     fetch(URL)
+//     .then(res => res.json())
+//     .then(data => {
+//   filterPrice.addEventListener('click', () => {
+//     const filteredPrice = data.sort((a, b) => b.price - a.price)
+//     displayPokemonTable(filteredPrice)
+//   })
+// })
+
+const selectPriceFilter = document.querySelector('#price-filter')
+    fetch(URL)
+    .then(res => res.json())
+    .then(data => {
+  selectPriceFilter.addEventListener('change', () => {
+    const selectFilterForPrice = selectPriceFilter.value
+    if (selectFilterForPrice === '$$$') {
+    const price$$$ = data.sort((a, b) => b.price - a.price)
+    displayPokemonTable(price$$$)
+  } else if (selectFilterForPrice === '$') {
+    const price$ = data.sort((a,b) => a.price - b.price)
+    displayPokemonTable(price$)
+  }
+  })
+})
+
+const selectQtyFilter = document.querySelector('#qty-filter')
+    fetch(URL)
+    .then(res => res.json())
+    .then(data => {
+  selectQtyFilter.addEventListener('change', () => {
+    const selectFilterForQty = selectQtyFilter.value
+    if (selectFilterForQty === 'hi') {
+    const qtyHi = data.sort((a, b) => b.inventory - a.inventory)
+    
+    displayPokemonTable(qtyHi)
+  } else if (selectFilterForQty === 'lo') {
+    const qtyLo = data.sort((a,b) => a.inventory - b.inventory)
+    displayPokemonTable(qtyLo)
+  }
+  })
+})
+
+const selectNameFilter = document.querySelector('#name-filter')
+    fetch(URL)
+    .then(res => res.json())
+    .then(data => {
+  selectNameFilter.addEventListener('change', () => {
+    const selectFilterForName = selectNameFilter.value
+    if (selectFilterForName === 'a-z') {
+    const namesAz = data.sort((a, b) => {
+      return a.name.localeCompare(b.name)
+    })
+    displayPokemonTable(namesAz)
+  } else if (selectFilterForName === 'z-a') {
+    const namesZa = data.sort((a,b) => {
+      return b.name.localeCompare(a.name)
+    })
+    displayPokemonTable(namesZa)
+  }
+  })
+})
 
 const fetchData = () => {
   fetch(URL)
@@ -67,4 +135,6 @@ const fetchData = () => {
     displayPokemonTable(data)
   })
 }
+
 fetchData()
+

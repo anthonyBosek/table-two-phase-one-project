@@ -64,12 +64,29 @@
         <table class="table">
           <thead>
             <tr>
-              <th>#</th>
-              <th>Image</th>
-              <th>Name</th>
+              <th class="number">#</th>
+              <th>
+                Image  
+              </th>
+              <th class="name">
+                <select id="name-filter">
+                  <option>Name</option>
+                  <option value="a-z">A-Z</option>
+                  <option value="z-a">Z-A</option>
+              </th>
               <th>Type</th>
-              <th>Qty</th>
-              <th>Price</th>
+              <th class="qty">
+                <select id="qty-filter">
+                  <option>Quantity</option>
+                  <option value="hi">High Qty</option>
+                  <option value="lo">Low Qty</option>
+              </th>
+              <th id="price">
+                <select id="price-filter">
+                  <option>Price</option>
+                  <option value="$$$">$$$>$</option>
+                  <option value="$">$>$$$</option>
+              </th>
             </tr>
           </thead>
           <tbody id="table-body"></tbody>
