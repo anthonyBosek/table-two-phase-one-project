@@ -9,7 +9,7 @@ body {
   --second-txt-clr: #757575;
 
   --accent-clr: #1e90ff;
-  --accent-clr-2: #1ee5ff;
+  --accent-clr-2: #bbddff;
 
   font-family: "Oswald", sans-serif;
   background: var(--bg-color);
@@ -60,6 +60,9 @@ nav {
   width: 100px;
   margin: 0 -20px 0 0;
 }
+.focus {
+  background: var(--accent-clr-2);
+}
 
 /* main section */
 main {
@@ -103,7 +106,7 @@ tbody tr:hover {
   transform: scale(1.02);
   align-items: center;
 }
-img:hover {
+td img:hover {
   transform: scale(3);
 }
 

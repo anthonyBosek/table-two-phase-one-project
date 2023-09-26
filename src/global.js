@@ -16,6 +16,7 @@ const modalContainer = document.getElementById("modal-container");
 const modalClose = document.getElementById("modal-close");
 const modal = document.getElementById("modal");
 const search = document.getElementById("search");
+const searchInput = document.getElementById("search-input");
 const mode = document.getElementById("mode");
 const cart = document.getElementById("cart");
 
