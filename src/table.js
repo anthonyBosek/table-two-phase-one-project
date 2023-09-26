@@ -10,6 +10,9 @@ const displayPokemonTable = (pokemonArray) => {
     const cardQty = document.createElement("td");
     const cardPrice = document.createElement("td");
 
+    pokemonItem.addEventListener('click', () => {
+      createCard(pokemon)
+    })
     pokemonImg.src = pokemon.ThumbnailImage;
     pokemonImg.alt = pokemon.name;
     pokemonName.textContent = pokemon.name;
@@ -58,10 +61,22 @@ const displayPokemonTable = (pokemonArray) => {
 
 //eventLiseners
 filterByNumber.addEventListener("click", () => {
-  fetchData();
+  selectPriceFilter.selectedIndex = 0;
+  selectTypeFilter.selectedIndex = 0; 
+  selectQtyFilter.selectedIndex = 0;
+  selectNameFilter.selectedIndex = 0;
+  fetch(URL)
+    .then((res) => res.json())
+    .then((data) => {
+  displayPokemonTable(data)
+    })
 });
 
+
 selectTypeFilter.addEventListener("change", () => {
+  selectQtyFilter.selectedIndex = 0;
+  selectNameFilter.selectedIndex = 0;
+  selectPriceFilter.selectedIndex = 0;
   fetch(URL)
     .then((res) => res.json())
     .then((data) => {
@@ -104,11 +119,18 @@ selectTypeFilter.addEventListener("change", () => {
       } else if (selectFilterForType === "all") {
         const allTypes = data;
         displayPokemonTable(allTypes);
+        selectTypeFilter.target.reset('#price-filter')
+        
+        
+        
       }
     });
 });
 
 selectPriceFilter.addEventListener("change", () => {
+  selectTypeFilter.selectedIndex = 0; 
+  selectQtyFilter.selectedIndex = 0;
+  selectNameFilter.selectedIndex = 0;
   fetch(URL)
     .then((res) => res.json())
     .then((data) => {
@@ -119,11 +141,15 @@ selectPriceFilter.addEventListener("change", () => {
       } else if (selectFilterForPrice === "$") {
         const price$ = data.sort((a, b) => a.price - b.price);
         displayPokemonTable(price$);
+
       }
     });
 });
 
 selectQtyFilter.addEventListener("change", () => {
+  selectNameFilter.selectedIndex = 0;
+  selectPriceFilter.selectedIndex = 0;
+  selectTypeFilter.selectedIndex = 0; 
   fetch(URL)
     .then((res) => res.json())
     .then((data) => {
@@ -139,6 +165,9 @@ selectQtyFilter.addEventListener("change", () => {
 });
 
 selectNameFilter.addEventListener("change", () => {
+  selectPriceFilter.selectedIndex = 0;
+  selectTypeFilter.selectedIndex = 0; 
+  selectQtyFilter.selectedIndex = 0;
   fetch(URL)
     .then((res) => res.json())
     .then((data) => {
