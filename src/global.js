@@ -24,6 +24,8 @@ const dropdownContent = document.getElementById("dropdown-content");
 const mode = document.getElementById("mode");
 const cart = document.getElementById("cart");
 // Modal Variables
+let totalPrice = 0;
+let quantity = 0;
 // temp data vars
 const userCartData = {
   customerNumber: 10011001,
@@ -31,6 +33,7 @@ const userCartData = {
   amountDue: 110.0,
   items: {
     Pikachu: 1,
+    Jigglypuff: 5,
     Ivysaur: 2,
     Oddish: 1,
   },
@@ -66,8 +69,10 @@ const tableBody = document.createElement("tbody");
 table.append(tableHead, tableBody);
 table.classList.add("width-100-pc");
 modal.append(h2, hr1, nameH4, hr2, amtH4, hr3, table);
-let totalPrice = 0;
-let quantity = 0;
+
+const displayCardOnPage = (pokeObj) => {
+  console.log(pokeObj);
+}
 
 
 // Modal Cart
@@ -82,14 +87,17 @@ const getPokemon = (pokeId, qty) => {
     }
   })
   .then(data => {
-    createTableRowData(data, qty);
+    if (qty) {
+      createTableRowData(data, qty);
+    } else {
+      displayCardOnPage(data);
+    }
   })
   .catch(err => alert(err))
 
 }
 
 const createTableRowData = (pokeObj, amt) => {
-  console.log(pokeObj, amt);
   const tr = document.createElement("tr");
   let total = (pokeObj.price * amt).toFixed(2)
   quantity += 1;
@@ -131,6 +139,7 @@ const init = () => {
     .then((pokemonArray) => {
       createSearchObj(pokemonArray);
       displayPokemonTable(pokemonArray);
+      getPokemon(searchObj["Jigglypuff"]);
     })
     .catch((err) => {
       console.log("Error: ", err);
