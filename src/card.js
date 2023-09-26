@@ -1,5 +1,6 @@
 const createCard = (pokemonObj) => {
   card.innerHTML = "";
+  
   const cardHeader = document.createElement("div");
   const cardTitle = document.createElement("span");
   cardTitle.id = "card-title";
@@ -33,6 +34,11 @@ const createCard = (pokemonObj) => {
   cardAbility.innerText = pokemonObj.abilitiesText;
 
   const hr = document.createElement("hr");
+
+  const fireCard = document.querySelector('.fire')
+  if (pokemonObj.type === 'fire') {
+    firCard.className('fire').append(cardHeader, cardImg, cardVitals, cardPower, hr, cardAbility, hr)
+  }
 
   card.append(cardHeader, cardImg, cardVitals, cardPower, hr, cardAbility, hr);
 };
