@@ -27,6 +27,7 @@ const cart = document.getElementById("cart");
 // Card Variables
 const card = document.getElementById("card");
 const cardBanner = document.getElementById("card-banner");
+const addToCart = document.getElementById("add-to-cart-form");
 
 // Modal Variables
 let totalPrice = 0;
@@ -35,14 +36,9 @@ let quantity = 0;
 // Simulated User Data
 const userData = {
   customerNumber: 10011001,
-  name: "John Doe",
-  amountDue: 110.0,
-  items: {
-    Pikachu: 1,
-    Jigglypuff: 5,
-    Ivysaur: 2,
-    Oddish: 1,
-  },
+  name: "Ash Ketchum",
+  amountDue: 0,
+  items: {},
 };
 
 // Simulated Inventory Data

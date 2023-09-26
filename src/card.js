@@ -45,3 +45,17 @@ const createCard = (pokemonObj) => {
     hr2
   );
 };
+
+const addCardToCart = (e) => {
+  e.preventDefault();
+  const qty = parseInt(e.target["card-qty"].value);
+  const poke = document.getElementById("card-title").innerText;
+  if (!userData.items[poke]) {
+    userData.items[poke] = qty;
+  } else {
+    userData.items[poke] += qty;
+  }
+  addToCart.reset();
+};
+
+addToCart.addEventListener("submit", addCardToCart);
