@@ -36,10 +36,13 @@
         <h1>ABA Card Shop</h1>
       </div>
       <div id="control-bar">
-        <form id="search">
-          <input type="text" name="search" id="search-input" />
-          <input type="submit" value="Search" />
-        </form>
+        <span id="dropdown">
+          <form id="search">
+            <input type="text" name="search" id="search-input" />
+            <input type="submit" value="Search" />
+          </form>
+          <ul id="dropdown-content"></ul>
+        </span>
 
         <span id="mode">
           <label for="mode-toggle"> <i class="fa fa-moon-o icon"></i> </label

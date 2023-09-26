@@ -1,15 +1,9 @@
 // Global Variables
 const URL = "http://localhost:3000/inventory";
+const USERS_URL = "http://localhost:3000/users";
+const POKEMON_URL = "http://localhost:3000/pokemon";
 // Table Variables
 const pokemonTable = document.querySelector("#table-body");
-const pokemonItem = document.createElement("tr");
-const pokemonName = document.createElement("td");
-const pokemonImgData = document.createElement("td");
-const pokemonImg = document.createElement("img");
-const pokemonIndex = document.createElement("td");
-const pokemonType = document.createElement("td");
-const cardQty = document.createElement("td");
-const cardPrice = document.createElement("td");
 // Nav-Bar Variables
 const tableContainer = document.getElementById("table-container");
 const modalContainer = document.getElementById("modal-container");
@@ -17,6 +11,7 @@ const modalClose = document.getElementById("modal-close");
 const modal = document.getElementById("modal");
 const search = document.getElementById("search");
 const searchInput = document.getElementById("search-input");
+const dropdownContent = document.getElementById("dropdown-content");
 const mode = document.getElementById("mode");
 const cart = document.getElementById("cart");
 // Modal Variables
@@ -30,20 +25,18 @@ const numItemsH4 = document.createElement("h4");
 const userCartData = {
   customerNumber: 10011001,
   name: "John Doe",
-  amountDue: 110.00,
+  amountDue: 110.0,
   items: {
-    "Pikachu": 1,
-    "Ivysaur": 2,
-    "Oddish": 1
+    Pikachu: 1,
+    Ivysaur: 2,
+    Oddish: 1,
   },
 };
 
-const createTableRowData = () => {
-
-}
+// Modal Cart
+const createTableRowData = () => {};
 
 const createTable = () => {
-  
   const tableHead = document.createElement("thead");
   tableHead.innerHTML = `
     <tr>
@@ -52,10 +45,10 @@ const createTable = () => {
       <th>Cost (Each)</th>
       <th class="left-border">Cost (Total)</th>
     </tr>
-  `
+  `;
   table.append(tableHead);
   return table;
-}
+};
 
 const displayCartData = () => {
   console.log("cart", userCartData);
@@ -64,8 +57,30 @@ const displayCartData = () => {
   const nameH4 = document.createElement("h4");
   nameH4.textContent = `Customer Name: ${userCartData.name}`;
   const hr2 = document.createElement("hr");
-  amtH4.textContent = `Amount Due: $${userCartData.amountDue}`
+  amtH4.textContent = `Amount Due: $${userCartData.amountDue}`;
   const hr3 = document.createElement("hr");
   const itemsTable = createTable();
   modal.append(h2, hr1, nameH4, hr2, amtH4, hr3, itemsTable);
-}
+};
+
+// Search Bar
+const searchObj = {};
+const createSearchObj = (pokemonArray) => {
+  pokemonArray.forEach((pokemon) => {
+    searchObj[pokemon.name] = pokemon.id;
+  });
+};
+
+// Initial Fetch for All Pokemon Inventory
+const init = () => {
+  getJSON(URL)
+    .then((pokemonArray) => {
+      createSearchObj(pokemonArray);
+      displayPokemonTable(pokemonArray);
+    })
+    .catch((err) => {
+      console.log("Error: ", err);
+    });
+};
+
+init();
