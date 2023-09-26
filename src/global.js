@@ -68,7 +68,11 @@ tableHead.innerHTML = `
 const tableBody = document.createElement("tbody");
 table.append(tableHead, tableBody);
 table.classList.add("width-100-pc");
-modal.append(h2, hr1, nameH4, hr2, amtH4, hr3, table);
+const modalForm = document.createElement("form");
+modalForm.innerHTML = `
+  <button id="modal-submit" type="submit">Place Order</button>
+`
+modal.append(h2, hr1, nameH4, hr2, amtH4, hr3, table, modalForm);
 
 const displayCardOnPage = (pokeObj) => {
   console.log(pokeObj);
@@ -125,6 +129,12 @@ const displayCartData = () => {
   
 }
 
+const placeOrder = (e) => {
+  e.preventDefault();
+  modalContainer.classList.toggle("hide");
+  alert("Order Placed!!!");
+}
+
 // Search Bar
 const searchObj = {};
 const createSearchObj = (pokemonArray) => {
@@ -147,3 +157,5 @@ const init = () => {
 };
 
 init();
+
+modalForm.addEventListener("submit", placeOrder);
