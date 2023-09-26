@@ -110,22 +110,18 @@ main {
 #box {
   padding-right: 30px;
 }
-
 .table thead {
   position: sticky;
   top: 0;
   z-index: 1;
 }
-
 thead {
   opacity: 75%;
 }
-
 td img {
   width: 30px;
   margin-right: 10px;
 }
-
 .scale {
   background-color: #f5f5f5;
   cursor: pointer;
@@ -175,6 +171,9 @@ td img {
   margin: 10px auto;
   background: goldenrod;
   text-align: center;
+}
+#card-vitals span {
+  margin: 10px;
 }
 
 #card-power {

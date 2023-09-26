@@ -1,11 +1,3 @@
-//Global vairables
-const selectPriceFilter = document.querySelector("#price-filter");
-const selectQtyFilter = document.querySelector("#qty-filter");
-const selectNameFilter = document.querySelector("#name-filter");
-const filterByNumber = document.querySelector("#number");
-const selectTypeFilter = document.querySelector("#type-filter");
-// --------------------------------------------------------------------------------------------
-
 const displayPokemonTable = (pokemonArray) => {
   pokemonTable.innerHTML = "";
   pokemonArray.forEach((pokemon) => {
@@ -40,6 +32,7 @@ const displayPokemonTable = (pokemonArray) => {
     } else if (pokemon.type[0] === "ground" || pokemon.type[0] === "rock") {
       pokemonItem.classList.add("table-secondary");
     }
+
     // hover effect
     pokemonItem.addEventListener("mouseenter", (event) => {
       pokemonItem.classList.add("scale");
@@ -62,8 +55,6 @@ const displayPokemonTable = (pokemonArray) => {
     pokemonTable.append(pokemonItem);
   });
 };
-
-// --------------------------------------------------------------------------------------------
 
 //eventLiseners
 filterByNumber.addEventListener("click", () => {
@@ -165,13 +156,3 @@ selectNameFilter.addEventListener("change", () => {
       }
     });
 });
-
-const fetchData = () => {
-  fetch(URL)
-    .then((res) => res.json())
-    .then((data) => {
-      displayPokemonTable(data);
-    });
-};
-
-fetchData();
