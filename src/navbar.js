@@ -22,6 +22,9 @@ mode.addEventListener("click", (e) => {
 // Modal Container Hide/Show
 cart.addEventListener("click", () => {
   modalContainer.classList.toggle("hide");
+  if (!Array.from(modalContainer.classList).includes("hide")) {
+    displayCartData();
+  }
 });
 modalClose.addEventListener("click", () => {
   modalContainer.classList.toggle("hide");

@@ -18,11 +18,53 @@ const modal = document.getElementById("modal");
 const search = document.getElementById("search");
 const mode = document.getElementById("mode");
 const cart = document.getElementById("cart");
+// Modal Variables
+const h2 = document.createElement("h2");
+const nameH4 = document.createElement("h4");
+const table = document.createElement("table");
+const amtH4 = document.createElement("h4");
+const numItemsH4 = document.createElement("h4");
 
 // temp data vars
 const userCartData = {
-  customerNumber: 0,
-  name: "",
-  amountDue: 0,
-  items: [],
+  customerNumber: 10011001,
+  name: "John Doe",
+  amountDue: 110.00,
+  items: {
+    "Pikachu": 1,
+    "Ivysaur": 2,
+    "Oddish": 1
+  },
 };
+
+const createTableRowData = () => {
+
+}
+
+const createTable = () => {
+  
+  const tableHead = document.createElement("thead");
+  tableHead.innerHTML = `
+    <tr>
+      <th class="right-border">Qty</th>
+      <th class="right-border">Name</th>
+      <th>Cost (Each)</th>
+      <th class="left-border">Cost (Total)</th>
+    </tr>
+  `
+  table.append(tableHead);
+  return table;
+}
+
+const displayCartData = () => {
+  console.log("cart", userCartData);
+  h2.textContent = `Customer No.: ${userCartData.customerNumber} `;
+  const hr1 = document.createElement("hr");
+  const nameH4 = document.createElement("h4");
+  nameH4.textContent = `Customer Name: ${userCartData.name}`;
+  const hr2 = document.createElement("hr");
+  amtH4.textContent = `Amount Due: $${userCartData.amountDue}`
+  const hr3 = document.createElement("hr");
+  const itemsTable = createTable();
+  modal.append(h2, hr1, nameH4, hr2, amtH4, hr3, itemsTable);
+}
