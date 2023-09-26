@@ -70,6 +70,10 @@ table.append(tableHead, tableBody);
 table.classList.add("width-100-pc");
 modal.append(h2, hr1, nameH4, hr2, amtH4, hr3, table);
 
+const displayCardOnPage = (pokeObj) => {
+  console.log(pokeObj);
+}
+
 
 // Modal Cart
 const getPokemon = (pokeId, qty) => {
@@ -83,7 +87,11 @@ const getPokemon = (pokeId, qty) => {
     }
   })
   .then(data => {
-    createTableRowData(data, qty);
+    if (qty) {
+      createTableRowData(data, qty);
+    } else {
+      displayCardOnPage(data);
+    }
   })
   .catch(err => alert(err))
 
@@ -131,6 +139,7 @@ const init = () => {
     .then((pokemonArray) => {
       createSearchObj(pokemonArray);
       displayPokemonTable(pokemonArray);
+      getPokemon(searchObj["Jigglypuff"]);
     })
     .catch((err) => {
       console.log("Error: ", err);
