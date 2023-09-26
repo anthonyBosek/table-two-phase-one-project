@@ -64,7 +64,7 @@
         <table class="table">
           <thead>
             <tr>
-              <th class="number">#</th>
+              <th id="number">#</th>
               <th>
                 Image  
               </th>
@@ -74,7 +74,19 @@
                   <option value="a-z">A-Z</option>
                   <option value="z-a">Z-A</option>
               </th>
-              <th>Type</th>
+              <th class="type">
+                <select id="type-filter">
+                  <option value="all">Type</option>
+                  <option value="fire">fire</option>
+                  <option value="grass">grass</option>
+                  <option value="water">water</option>
+                  <option value="bug">bug</option>
+                  <option value="ground">ground</option>
+                  <option value="electric">electric</option>
+                  <option value="poison">poison</option>
+                  <option value="normal">normal</option>
+                  <option value="fairy">fairy</option>
+              </th>
               <th class="qty">
                 <select id="qty-filter">
                   <option>Quantity</option>
