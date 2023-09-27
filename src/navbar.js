@@ -1,16 +1,4 @@
 // Search Bar Functionality
-getCardData = (id) => {
-  getJSON(`${URL}/${id.split("-")[1]}`)
-    .then((data) => {
-      let isDOD = cardBanner.innerText === "";
-      cardBanner.innerText = isDOD
-        ? "Deal of the Day!"
-        : (cardBanner.innerText = `${data.name} - $${data.price}`);
-      createCard(data);
-    })
-    .catch((err) => console.log("Error: ", err));
-};
-
 const createDropdown = (data) => {
   // alphabetize data
   data.sort((a, b) => {
@@ -26,8 +14,8 @@ const createDropdown = (data) => {
       const li = document.createElement("li");
       li.id = `li-${id}`;
       li.textContent = name;
-      li.addEventListener("click", (e) => {
-        getCardData(e.target.id);
+      li.addEventListener("click", () => {
+        getOnePokemon(id);
         dropdownContent.classList.remove("show");
         search.reset();
       });

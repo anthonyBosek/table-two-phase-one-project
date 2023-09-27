@@ -1,4 +1,5 @@
 // Populate Modal Content
+const div = document.createElement("div");
 const h2 = document.createElement("h2");
 const span1 = document.createElement("span");
 h2.textContent = `Customer No.: `;

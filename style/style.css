@@ -112,8 +112,8 @@ main {
 }
 #box {
   padding-right: 30px;
+  padding-left: 30px;
 }
-
 .table thead {
   position: sticky;
   top: 0;
@@ -132,6 +132,7 @@ td img {
 .scale {
   cursor: pointer;
   transform: scale(1.025);
+  transition: all 0.2s ease-in-out;
 }
 .img-scale {
   transform: scale(3.25);
@@ -146,6 +147,9 @@ td img {
 }
 .water {
   background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/81ccfdb7-ac1d-423f-a276-af63abae5ba2/d5oujyw-580a0eed-e966-46c3-b46c-19ad3e890981.png/v1/fit/w_429,h_614,q_70,strp/water__bw__texture_by_pkmncardmaker264_d5oujyw-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjE0IiwicGF0aCI6IlwvZlwvODFjY2ZkYjctYWMxZC00MjNmLWEyNzYtYWY2M2FiYWU1YmEyXC9kNW91anl3LTU4MGEwZWVkLWU5NjYtNDZjMy1iNDZjLTE5YWQzZTg5MDk4MS5wbmciLCJ3aWR0aCI6Ijw9NDI5In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.6vfShTuSTxItZrdM2HzCBsDrEkjnNwILQs5R6m6KOpQ");
+}
+.water#card-img {
+background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/81ccfdb7-ac1d-423f-a276-af63abae5ba2/d5oun1x-6975d2e1-093f-4f3f-88f4-21ea09a01e93.png/v1/fit/w_431,h_614,q_70,strp/lightning__bw__texture_by_pkmncardmaker264_d5oun1x-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjE0IiwicGF0aCI6IlwvZlwvODFjY2ZkYjctYWMxZC00MjNmLWEyNzYtYWY2M2FiYWU1YmEyXC9kNW91bjF4LTY5NzVkMmUxLTA5M2YtNGYzZi04OGY0LTIxZWEwOWEwMWU5My5wbmciLCJ3aWR0aCI6Ijw9NDMxIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.jHEFjRdLUpvvMcXU77rGv4MY7ngZQHSZtnoszNFbqvs");
 }
 .ground {
   background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bafcbb8b-6adb-4b6b-9e8b-60ed07e17c32/d6aiv12-db33a9c2-3c51-4ed0-b65a-c519a9a742ca.png/v1/fit/w_430,h_615/ground_texture_by_metagross101_d6aiv12-375w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjE1IiwicGF0aCI6IlwvZlwvYmFmY2JiOGItNmFkYi00YjZiLTllOGItNjBlZDA3ZTE3YzMyXC9kNmFpdjEyLWRiMzNhOWMyLTNjNTEtNGVkMC1iNjVhLWM1MTlhOWE3NDJjYS5wbmciLCJ3aWR0aCI6Ijw9NDMwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.EYPtV1PwoOvXrv2Xr0zy0lf6nmgyxGSQFkB7g-482Es");
@@ -166,37 +170,64 @@ td img {
   background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bafcbb8b-6adb-4b6b-9e8b-60ed07e17c32/d6aiv7n-fb799d0b-66c7-4075-9312-f36f259600f0.png/v1/fit/w_426,h_614/poison_texture_by_metagross101_d6aiv7n-375w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjE0IiwicGF0aCI6IlwvZlwvYmFmY2JiOGItNmFkYi00YjZiLTllOGItNjBlZDA3ZTE3YzMyXC9kNmFpdjduLWZiNzk5ZDBiLTY2YzctNDA3NS05MzEyLWYzNmYyNTk2MDBmMC5wbmciLCJ3aWR0aCI6Ijw9NDI2In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.iWJn_KhI4D5pVMrLDRMMjvoYOuWX_pj-fRrhFLoS9qY");
 }
 
+
+.is-flipped {
+  /* transition: transform 0.8s;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg); */
+  content-visibility: hidden;
+  background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4f7705ec-8c49-4eed-a56e-c21f3985254c/dah43cy-a8e121cb-934a-40f6-97c7-fa2d77130dd5.png/v1/fill/w_759,h_1053/pokemon_card_backside_in_high_resolution_by_atomicmonkeytcg_dah43cy-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTQyMCIsInBhdGgiOiJcL2ZcLzRmNzcwNWVjLThjNDktNGVlZC1hNTZlLWMyMWYzOTg1MjU0Y1wvZGFoNDNjeS1hOGUxMjFjYi05MzRhLTQwZjYtOTdjNy1mYTJkNzcxMzBkZDUucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.9GzaYS7sd8RPY5FlHca09J9ZQZ9D9zI69Ru-BsbkLDA'); 
+  background-size: 425px;
+  background-position: center;
+  
+}
+
 /* card component */
 #card-container {
+  overflow: scroll;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
   width: 35%;
-  min-height: 750px;
+  min-height: 80%;
+
 }
 #card {
-  height: 550px;
   color: #000000;
+  height: 550px;
   width: 400px;
   border: 10px solid rgb(255, 236, 80);
   border-radius: 10px;
   padding: 0 20px;
-  box-shadow: 6px 6px 14px black;
+  box-shadow: 6px 6px 14px black;x
+  z-index: 1;
 }
+
+
+
+
 #card-header {
   display: flex;
   justify-content: space-between;
   padding: 7px 27px;
   font-size: 2em;
 }
+#card-banner {
+  text-align: center;
+}
+#card-banner > span {
+  font-size: 1.02em;
+  font-weight: bold;
+  color: red;
+}
 #card-subtitle {
   color: red;
 }
 #card-img {
-  max-width: 83%;
+  max-width: 85%;
   border: 5px solid rgb(255, 236, 80);
-  background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/81ccfdb7-ac1d-423f-a276-af63abae5ba2/d5oujyw-580a0eed-e966-46c3-b46c-19ad3e890981.png/v1/fit/w_429,h_614,q_70,strp/water__bw__texture_by_pkmncardmaker264_d5oujyw-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjE0IiwicGF0aCI6IlwvZlwvODFjY2ZkYjctYWMxZC00MjNmLWEyNzYtYWY2M2FiYWU1YmEyXC9kNW91anl3LTU4MGEwZWVkLWU5NjYtNDZjMy1iNDZjLTE5YWQzZTg5MDk4MS5wbmciLCJ3aWR0aCI6Ijw9NDI5In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.6vfShTuSTxItZrdM2HzCBsDrEkjnNwILQs5R6m6KOpQ');
+  background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/81ccfdb7-ac1d-423f-a276-af63abae5ba2/d5oujyw-580a0eed-e966-46c3-b46c-19ad3e890981.png/v1/fit/w_429,h_614,q_70,strp/water__bw__texture_by_pkmncardmaker264_d5oujyw-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjE0IiwicGF0aCI6IlwvZlwvODFjY2ZkYjctYWMxZC00MjNmLWEyNzYtYWY2M2FiYWU1YmEyXC9kNW91anl3LTU4MGEwZWVkLWU5NjYtNDZjMy1iNDZjLTE5YWQzZTg5MDk4MS5wbmciLCJ3aWR0aCI6Ijw9NDI5In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.6vfShTuSTxItZrdM2HzCBsDrEkjnNwILQs5R6m6KOpQ");
   margin: 0 auto;
   text-align: center;
   box-shadow: 4px 4px 8px black;
@@ -210,11 +241,12 @@ td img {
 #card-vitals span {
   margin: 10px;
 }
-#card-power, #card-ability {
+#card-power,
+#card-ability {
   width: 83%;
   margin: 0 auto;
   text-align: justify;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 #card hr {
   width: 83%;
@@ -242,24 +274,29 @@ td img {
   z-index: 2;
 }
 #modal {
-  height: 60%;
-  width: 60%;
-  background: #161616;
-  padding: 10px;
+  height: 62%;
+  width: 62%;
+  background: var(--primary-color);
+  /* background: #161616; */
+  padding: 30px;
   min-width: 290px;
   border-radius: 10px;
-  overflow: auto;
   position: relative;
 }
 #modal-close {
-  /* color: var(--main-txt-color); */
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 20px;
   font-size: 2em;
-  margin-right: 15px;
+  /* margin-right: 15px; */
 }
-
-#modal, #modal-close {
-  color: #eee
+#modal > div {
+  margin-top: 20px;
+}
+#modal,
+#modal-close {
+  color: var(--main-txt-color);
+  /* color: #eee; */
 }
 
 #modal tr {
@@ -354,11 +391,9 @@ footer {
   align-items: center;
 }
 
-
-
 /* ===== media queries ===== */
 
-@media (min-width:1241px) {
+@media (min-width: 1241px) {
   body {
     overflow: hidden;
   }
@@ -367,16 +402,16 @@ footer {
   }
 }
 
-@media (max-width:1240px) {
+@media (max-width: 1240px) {
   #table-container {
     width: 90%;
     min-width: 0px;
   }
 }
 
-@media (max-width:767px) and (min-width: 541px) {
+@media (max-width: 767px) and (min-width: 541px) {
   h1 {
-    font-size: calc(1.375rem + .7vw);
+    font-size: calc(1.375rem + 0.7vw);
   }
   .logo {
     width: 75px;
@@ -398,7 +433,7 @@ footer {
 
 @media (max-width: 540px) {
   h1 {
-    font-size: calc(1.375rem + .7vw);
+    font-size: calc(1.375rem + 0.7vw);
   }
   .logo {
     width: 75px;
@@ -420,7 +455,7 @@ footer {
   table {
     font-size: 10px;
   }
-  .table>:not(caption)>*>* {
+  .table > :not(caption) > * > * {
     padding: 0.5rem 0;
   }
   .icon {
@@ -435,7 +470,7 @@ footer {
   }
   #card-header {
     font-size: 1.2em;
-    padding: 4px 18px
+    padding: 4px 18px;
   }
   #card-img {
     height: 40%;
@@ -443,11 +478,12 @@ footer {
   #card-img img {
     width: 80%;
   }
-  #card-power, #card-ability {
-    font-size: .5em;
+  #card-power,
+  #card-ability {
+    font-size: 0.5em;
   }
   #card-vitals {
-    font-size: .6em;
+    font-size: 0.6em;
   }
   #modal h2 {
     font-size: calc(1.325rem + 0vw);
