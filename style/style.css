@@ -230,7 +230,8 @@ td img {
 /* modal component */
 #modal-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   position: fixed;
   top: 0;
@@ -285,16 +286,12 @@ td img {
   padding: 10px;
 }
 
-#modal form {
-  position: absolute;
-  bottom: 3%;
+#modal-submit {
+  /* position: absolute;
+  bottom: 3%; */
   display: flex;
   justify-content: center;
   width: 100%;
-  padding-right: 25px;
-}
-
-#modal-submit {
   transition: all .2s linear;
 }
 
@@ -303,7 +300,22 @@ td img {
   color: #eee;
 }
 
-.right-border {
+.modal-card-qty {
+  height: 3.5em;
+  width: 100%;
+  padding-left: 10px;
+  color: #eee;
+  background-color: #4b4949;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+}
+
+.modal-card-qty input button{
+  color: #b8380d;
+}
+
+.right-border, .modal-card-qty {
   border-right: 1px solid var(--bs-border-color);
 }
 
@@ -326,6 +338,11 @@ td img {
 /* hide */
 #modal-container.hide {
   display: none;
+}
+
+.hidden {
+  visibility: hidden;
+  height: 100px;
 }
 
 /* footer */

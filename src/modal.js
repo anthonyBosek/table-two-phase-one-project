@@ -32,20 +32,28 @@ const modalForm = document.createElement("form");
 modalForm.innerHTML = `
   <button id="modal-submit" type="submit">Place Order</button>
 `;
-modal.append(h2, hr1, nameH4, hr2, amtH4, hr3, table, modalForm);
-
+modal.append(h2, hr1, nameH4, hr2, amtH4, hr3, table);
+modalContainer.append(modalForm);
 // Dynamically Populate Modal Content card data
 const createTableRowData = (pokeObj, amt) => {
   const tr = document.createElement("tr");
   let total = (pokeObj.price * amt).toFixed(2);
   quantity += 1;
   totalPrice += Number(total);
+  const input = document.createElement("input");
+  input.type = "number";
+  input.name = "modal-card-qty";
+  input.classList.add("modal-card-qty");
+  input.value = amt;
+  input.max = pokeObj.inventory;
+  input.min = 0;
+  input.addEventListener("change", updateOrder);
   tr.innerHTML = `
-        <input type="number" name="modal-card-qty" id="modal-card-qty" value="${amt}">
         <td class="right-border width-50-pc">${pokeObj.name}</td>
         <td class=" width-15-pc">$${pokeObj.price}</td>
         <td class="left-border  width-15-pc">$${total}</td>
     `;
+  tr.insertAdjacentElement("afterbegin", input);
   tableBody.append(tr);
   span3.textContent = `$ ${totalPrice.toFixed(2)}`;
 };
@@ -63,9 +71,13 @@ const getPokemon = (pokeId, qty) => {
     .then((data) => {
       if (qty) {
         createTableRowData(data, qty);
+        const arr = Array.from(document.querySelectorAll("#modal input"));
+        console.log("qty", arr);
       } else {
-        alert("No card in inventory.");
-        // displayCardOnPage(data);
+        const arr = Array.from(document.querySelectorAll("#modal tr"));
+        if (arr.length === 1) {
+          span3.textContent = "$0.00";
+        }
       }
     })
     .catch((err) => alert(err));
@@ -81,6 +93,7 @@ const displayCartData = () => {
   for (let each in userData.items) {
     getPokemon(`${searchObj[each]}`, userData.items[each]);
   }
+
 };
 
 // Mock order placement
@@ -90,16 +103,12 @@ const placeOrder = (e) => {
   alert("Order Placed!!!");
 };
 
-// const addCardToCart = (e) => {
-//   e.preventDefault();
-//   const qty = parseInt(e.target["card-qty"].value);
-//   const poke = document.getElementById("card-title").innerText;
-//   if (!userData.items[poke]) {
-//     userData.items[poke] = qty;
-//   } else {
-//     userData.items[poke] += qty;
-//   }
-//   addToCart.reset();
-// };
+const updateOrder = (e) => {
+  const modalRow = e.target.parentElement;
+  const nameTD = modalRow.querySelector("td").textContent
+  const qtyInput = Number(modalRow.querySelector("input").value);
+  userData.items[nameTD] = qtyInput;
+  displayCartData();
+}
 
 modalForm.addEventListener("submit", placeOrder);
