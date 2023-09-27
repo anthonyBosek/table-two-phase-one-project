@@ -258,7 +258,7 @@ td.sale {
   color: red;
 }
 s {
-  color: var(--main-txt-color);
+  color: #333333;
 }
 #card-img {
   max-width: 85%;
@@ -356,10 +356,32 @@ s {
   padding: 10px;
 }
 
-#modal-submit {
+#modal > div {
+  height: 60%;
+  overflow-y: scroll;
+}
+
+#modal > div::-webkit-scrollbar {
+  display: none;
+}
+
+#modal > div > table > thead {
+  color: var(--main-txt-color);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: 2px solid var(--bs-border-color);
+}
+
+#modal > form {
   display: flex;
   justify-content: center;
-  width: 100%;
+}
+
+#modal-submit {
+  position: absolute;
+  bottom: 50px;
+  width: 200px;
   transition: all 0.2s linear;
 }
 

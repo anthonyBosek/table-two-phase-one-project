@@ -16,6 +16,7 @@ const span3 = document.createElement("span");
 amtH4.textContent = `Amount Due: `;
 amtH4.append(span3);
 const hr3 = document.createElement("hr");
+const modalTable = document.createElement("div");
 const table = document.createElement("table");
 const tableHead = document.createElement("thead");
 tableHead.innerHTML = `
@@ -31,10 +32,11 @@ table.append(tableHead, tableBody);
 table.classList.add("width-100-pc");
 const modalForm = document.createElement("form");
 modalForm.innerHTML = `
-  <button id="modal-submit" type="submit">Place Order</button>
+  <input id="modal-submit" type="submit" value="Place Order" >
 `;
-modal.append(h2, hr1, nameH4, hr2, amtH4, hr3, table);
-modalContainer.append(modalForm);
+modalTable.append(table);
+modal.append(h2, hr1, nameH4, hr2, amtH4, hr3, modalTable);
+modal.append(modalForm);
 // Dynamically Populate Modal Content card data
 const createTableRowData = (pokeObj, amt) => {
   if (pokeObj.id === dealId) {
