@@ -222,7 +222,6 @@ background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/81ccf
   color: red;
 }
 #card-subtitle {
-  /* font-size: 2em; */
   color: red;
 }
 #card-img {
@@ -252,7 +251,7 @@ background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/81ccf
 #card hr {
   width: 83%;
   height: 3px;
-  background: black;
+  background: #000000;
   margin: 1rem auto;
 }
 #card-qty {
@@ -263,7 +262,8 @@ background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/81ccf
 /* modal component */
 #modal-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   position: fixed;
   top: 0;
@@ -323,17 +323,13 @@ background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/81ccf
   padding: 10px;
 }
 
-#modal form {
-  position: absolute;
-  bottom: 3%;
+#modal-submit {
+  /* position: absolute;
+  bottom: 3%; */
   display: flex;
   justify-content: center;
   width: 100%;
-  padding-right: 25px;
-}
-
-#modal-submit {
-  transition: all 0.2s linear;
+  transition: all .2s linear;
 }
 
 #modal-submit:hover {
@@ -341,7 +337,22 @@ background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/81ccf
   color: #eee;
 }
 
-.right-border {
+.modal-card-qty {
+  height: 3.5em;
+  width: 100%;
+  padding-left: 10px;
+  color: #eee;
+  background-color: #4b4949;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+}
+
+.modal-card-qty input button{
+  color: #b8380d;
+}
+
+.right-border, .modal-card-qty {
   border-right: 1px solid var(--bs-border-color);
 }
 
@@ -364,6 +375,11 @@ background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/81ccf
 /* hide */
 #modal-container.hide {
   display: none;
+}
+
+.hidden {
+  visibility: hidden;
+  height: 100px;
 }
 
 /* footer */

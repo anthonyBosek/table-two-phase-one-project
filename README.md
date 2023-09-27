@@ -56,6 +56,10 @@
 
 - The user can adjust the order in which the cards are listed by selecting the different options located at the top of every column. For example, the user can click on the 'Name' option and sort the list alphabetically or the reverse.
 - The user can switch the color theme of the app by clicking the moon located in the top right area of the page, to the right of the search bar.
+- It should look like this:
+- ==============================================
+    ![Home page of app.](./assets/dark-index.png "Home Page")
+- ==============================================
 
 
 ## License
@@ -67,13 +71,13 @@
 
 - The project was completed with collaboration from: `Anthony Bosek`, `Austin Ohlfs`, and `Brian Richie Sr.`
 - This project was created with combination of skills learned from the `Flatiron` curriculum and our own individual research.
-- The data used to seed the original data prior to be modified for the purposes of this project was supplied by [Pokedex](https://rapidapi.com/lduran2-CvRRB1hLBCj/api/pokedex2) created by `Luis Duran`.
+- The data used to seed the original data prior to being modified for the purposes of this project was supplied by [Pokedex](https://rapidapi.com/lduran2-CvRRB1hLBCj/api/pokedex2) created by `Luis Duran`.
 
 ## What I Learned
 
 - `Anthony`: 
 - `Austin`: 
-- `Brian`: 
+- `Brian`: I learned a bit about the complexities of the `GitHub` repositories and a bit about the power of the `GitHub` interface. Pushing and pulling into the repository while code is being altered will inevitably lead to conflicts. However, with good communication and knowledge gained, we were able to overcome the conflicts efficiently and continue to complete this project. And as always, I learned a great deal from the people I worked with on this project. The intelligence and creativity of my teammates is amazing. Thank you Anthony, Austin, and the `Flatiron` community.
 
 
 * [Back To Top](#table-2-phase-1-project)
