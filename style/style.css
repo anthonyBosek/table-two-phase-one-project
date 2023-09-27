@@ -197,7 +197,7 @@ td img {
   border-radius: 10px;
   padding: 0 20px;
   box-shadow: 6px 6px 14px black;
-  z-index: 1;
+  z-index: -1;
   position: relative;
   transition: all 0.4s linear;
   transform-style: preserve-3d;
@@ -257,7 +257,7 @@ td img {
 td.sale {
   color: red;
 }
-s {
+td s {
   color: #333333;
 }
 #card-img {

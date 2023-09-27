@@ -100,13 +100,22 @@ const displayCartData = () => {
   }
 };
 
+// Update Inventory when order is placed
+const patchInventory = (obj) => {
+  searchObj;
+  obj.forEach((each) => {});
+};
+
 // Mock order placement
 const placeOrder = (e) => {
   e.preventDefault();
   console.log(userData);
   userData.amountDue = totalPrice;
+  patchInventory(userData.items);
   modalContainer.classList.toggle("hide");
   alert("Order Placed!!!");
+  userData.amountDue = 0;
+  userData.items = {};
 };
 
 const updateOrder = (e) => {
