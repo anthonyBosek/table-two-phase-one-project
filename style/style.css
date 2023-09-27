@@ -200,7 +200,7 @@ background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/81ccf
   border: 10px solid rgb(255, 236, 80);
   border-radius: 10px;
   padding: 0 20px;
-  box-shadow: 6px 6px 14px black;x
+  box-shadow: 6px 6px 14px black;
   z-index: 1;
 }
 
@@ -407,6 +407,32 @@ footer {
     width: 90%;
     min-width: 0px;
   }
+  #card-container {
+    width: 100%;
+    padding-top: 30px;
+  }
+  #card {
+    width: 290px;
+    height: 405px;
+    margin: 25px 0;
+  }
+  #card-header {
+    font-size: 1.2em;
+    padding: 4px 18px;
+  }
+  #card-img {
+    height: 40%;
+  }
+  #card-img img {
+    width: 80%;
+  }
+  #card-power,
+  #card-ability {
+    font-size: 0.5em;
+  }
+  #card-vitals {
+    font-size: 0.6em;
+  }
 }
 
 @media (max-width: 767px) and (min-width: 541px) {
@@ -460,30 +486,6 @@ footer {
   }
   .icon {
     font-size: 1.5em;
-  }
-  #card-container {
-    width: 100%;
-  }
-  #card {
-    width: 290px;
-    height: 405px;
-  }
-  #card-header {
-    font-size: 1.2em;
-    padding: 4px 18px;
-  }
-  #card-img {
-    height: 40%;
-  }
-  #card-img img {
-    width: 80%;
-  }
-  #card-power,
-  #card-ability {
-    font-size: 0.5em;
-  }
-  #card-vitals {
-    font-size: 0.6em;
   }
   #modal h2 {
     font-size: calc(1.325rem + 0vw);
