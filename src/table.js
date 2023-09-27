@@ -77,7 +77,7 @@ filterByNumber.addEventListener("click", () => {
 });
 
 selectTypeFilter.addEventListener("change", () => {
-   selectQtyFilter.selectedIndex = 0;
+  //  selectQtyFilter.selectedIndex = 0;
    selectNameFilter.selectedIndex = 0;
   // selectPriceFilter.selectedIndex = 0;
   fetch(URL)
@@ -85,6 +85,7 @@ selectTypeFilter.addEventListener("change", () => {
     .then((data) => {
       const selectFilterForType = selectTypeFilter.value;
       const selectFilterForPrice = selectPriceFilter.value;
+      const selectFilterForQty = selectQtyFilter.value;
       if (selectFilterForType === "fire" && selectFilterForPrice === "$$$") {
         const firePriceFilter = data.filter((pokemon) => pokemon.type[0] === "fire");
         const firePrice$$$ = firePriceFilter.sort((a, b) => b.price - a.price);
@@ -157,11 +158,82 @@ selectTypeFilter.addEventListener("change", () => {
           const fairyPriceFilter = data.filter((pokemon) => pokemon.type[0] === "fairy");
           const fairyPrice$ = fairyPriceFilter.sort((a, b) => a.price - b.price);
           displayPokemonTable(fairyPrice$);
+        } else if (selectFilterForType ==='fire' && selectFilterForQty === "hi") {
+          const fireQtyFilter = data.filter((pokemon) => pokemon.type[0] === "fire");
+          const fireQtyHi = fireQtyFilter.sort((a, b) => b.inventory - a.inventory);
+          displayPokemonTable(fireQtyHi);
+        } else if (selectFilterForType ==='fire' && selectFilterForQty === "lo") {
+          const fireQtyFilter = data.filter((pokemon) => pokemon.type[0] === "fire");
+          const fireQtylo = fireQtyFilter.sort((a, b) => a.inventory - b.inventory);
+          displayPokemonTable(fireQtylo);
+        } else if (selectFilterForType ==='grass' && selectFilterForQty === "hi") {
+          const grassQtyFilter = data.filter((pokemon) => pokemon.type[0] === "grass");
+          const grassQtyHi = grassQtyFilter.sort((a, b) => b.inventory - a.inventory);
+          displayPokemonTable(grassQtyHi);
+        } else if (selectFilterForType ==='grass' && selectFilterForQty === "lo") {
+          const grassQtyFilter = data.filter((pokemon) => pokemon.type[0] === "grass");
+          const grassQtylo = grassQtyFilter.sort((a, b) => a.inventory - b.inventory);
+          displayPokemonTable(grassQtylo);
+        } else if (selectFilterForType ==='water' && selectFilterForQty === "hi") {
+          const waterQtyFilter = data.filter((pokemon) => pokemon.type[0] === "water");
+          const waterQtyHi = waterQtyFilter.sort((a, b) => b.inventory - a.inventory);
+          displayPokemonTable(waterQtyHi);
+        } else if (selectFilterForType ==='water' && selectFilterForQty === "lo") {
+          const waterQtyFilter = data.filter((pokemon) => pokemon.type[0] === "water");
+          const waterQtylo = waterQtyFilter.sort((a, b) => a.inventory - b.inventory);
+          displayPokemonTable(waterQtylo);
+        } else if (selectFilterForType ==='bug' && selectFilterForQty === "hi") {
+          const bugQtyFilter = data.filter((pokemon) => pokemon.type[0] === "bug");
+          const bugQtyHi = bugQtyFilter.sort((a, b) => b.inventory - a.inventory);
+          displayPokemonTable(bugQtyHi);
+        } else if (selectFilterForType ==='bug' && selectFilterForQty === "lo") {
+          const bugQtyFilter = data.filter((pokemon) => pokemon.type[0] === "bug");
+          const bugQtylo = bugQtyFilter.sort((a, b) => a.inventory - b.inventory);
+          displayPokemonTable(bugQtylo);
+        } else if (selectFilterForType ==='ground' && selectFilterForQty === "hi") {
+          const groundQtyFilter = data.filter((pokemon) => pokemon.type[0] === "ground");
+          const groundQtyHi = groundQtyFilter.sort((a, b) => b.inventory - a.inventory);
+          displayPokemonTable(groundQtyHi);
+        } else if (selectFilterForType ==='ground' && selectFilterForQty === "lo") {
+          const groundQtyFilter = data.filter((pokemon) => pokemon.type[0] === "ground");
+          const groundQtylo = groundQtyFilter.sort((a, b) => a.inventory - b.inventory);
+          displayPokemonTable(groundQtylo);
+        } else if (selectFilterForType ==='electric' && selectFilterForQty === "hi") {
+          const electricQtyFilter = data.filter((pokemon) => pokemon.type[0] === "electric");
+          const electricQtyHi = electricQtyFilter.sort((a, b) => b.inventory - a.inventory);
+          displayPokemonTable(electricQtyHi);
+        } else if (selectFilterForType ==='electric' && selectFilterForQty === "lo") {
+          const electricQtyFilter = data.filter((pokemon) => pokemon.type[0] === "electric");
+          const electricQtylo = electricQtyFilter.sort((a, b) => a.inventory - b.inventory);
+          displayPokemonTable(electricQtylo);
+        } else if (selectFilterForType ==='poison' && selectFilterForQty === "hi") {
+          const poisonQtyFilter = data.filter((pokemon) => pokemon.type[0] === "poison");
+          const poisonQtyHi = poisonQtyFilter.sort((a, b) => b.inventory - a.inventory);
+          displayPokemonTable(poisonQtyHi);
+        } else if (selectFilterForType ==='poison' && selectFilterForQty === "lo") {
+          const poisonQtyFilter = data.filter((pokemon) => pokemon.type[0] === "poison");
+          const poisonQtylo = poisonQtyFilter.sort((a, b) => a.inventory - b.inventory);
+          displayPokemonTable(poisonQtylo);
+        } else if (selectFilterForType ==='normal' && selectFilterForQty === "hi") {
+          const normalQtyFilter = data.filter((pokemon) => pokemon.type[0] === "normal");
+          const normalQtyHi = normalQtyFilter.sort((a, b) => b.inventory - a.inventory);
+          displayPokemonTable(normalQtyHi);
+        } else if (selectFilterForType ==='normal' && selectFilterForQty === "lo") {
+          const normalQtyFilter = data.filter((pokemon) => pokemon.type[0] === "normal");
+          const normalrQtylo = normalQtyFilter.sort((a, b) => a.inventory - b.inventory);
+          displayPokemonTable(normalrQtylo);
+        } else if (selectFilterForType ==='fairy' && selectFilterForQty === "hi") {
+          const fairyQtyFilter = data.filter((pokemon) => pokemon.type[0] === "fairy");
+          const fairyQtyHi = fairyQtyFilter.sort((a, b) => b.inventory - a.inventory);
+          displayPokemonTable(fairyQtyHi);
+        } else if (selectFilterForType ==='fairy' && selectFilterForQty === "lo") {
+          const fairyQtyFilter = data.filter((pokemon) => pokemon.type[0] === "fairy");
+          const fairyQtylo = fairyQtyFilter.sort((a, b) => a.inventory - b.inventory);
+          displayPokemonTable(fairyQtylo);
       } else if (selectFilterForType === "fire") {
         const typeFire = data.filter((pokemon) => pokemon.type[0] === "fire");
         displayPokemonTable(typeFire);
-      }  
-        else if (selectFilterForType === "grass") {
+      } else if (selectFilterForType === "grass") {
         const typeGrass = data.filter((pokemon) => pokemon.type[0] === "grass");
         displayPokemonTable(typeGrass);
       } else if (selectFilterForType === "water") {
