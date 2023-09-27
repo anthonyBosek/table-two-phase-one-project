@@ -206,8 +206,6 @@ td img {
   -webkit-backface-visibility: hidden;
 }
 
-
-
 .flip:after {
   content: "";
   right: 0px;
