@@ -41,7 +41,10 @@ const createCard = (pokemonObj) => {
 
   const cardPower = document.createElement("p");
   cardPower.id = "card-power";
-  let truncatedText = pokemonObj.powerText.length > 200 ? (pokemonObj.powerText.slice(0, 201) + "...") : pokemonObj.powerText;
+  let truncatedText =
+    pokemonObj.powerText.length > 200
+      ? pokemonObj.powerText.slice(0, 201) + "..."
+      : pokemonObj.powerText;
   cardPower.innerText = truncatedText;
 
   const cardAbility = document.createElement("p");
@@ -50,6 +53,8 @@ const createCard = (pokemonObj) => {
 
   const hr1 = document.createElement("hr");
   const hr2 = document.createElement("hr");
+
+  cardQty.max = pokemonObj.inventory;
 
   card.append(
     cardHeader,

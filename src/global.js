@@ -28,6 +28,7 @@ const cart = document.getElementById("cart");
 const card = document.getElementById("card");
 const cardBanner = document.getElementById("card-banner");
 const addToCart = document.getElementById("add-to-cart-form");
+const cardQty = document.getElementById("card-qty");
 
 // Modal Variables
 let totalPrice = 0;
