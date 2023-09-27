@@ -5,14 +5,17 @@
 
 * [Dependencies](#dependencies)
 * [Starting the Application](#starting-the-application)
+* [Using the Application](#using-the-application)
+* [Optional Features](#optional-features)
 * [License](#license)
 * [Attributions](#attributions)
+* [What I Learned](#what-i-learned)
 
 
 ## Intro To Project
 
 - This project was made to complete the assignment `Phase 1 Project` for the `SE-West-091123` class for the [Flatiron](https://flatironschool.com/) Software Engineering Boot Camp.
-- The project was completed using the following: `HTML`, `CSS`, `JavaScript`.
+- The project was completed using the following: `JavaScript`, `HTML`, `CSS`, `Bootstrap`.
 
 
 ## Dependencies
