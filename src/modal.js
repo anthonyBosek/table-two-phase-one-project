@@ -37,6 +37,9 @@ modal.append(h2, hr1, nameH4, hr2, amtH4, hr3, table);
 modalContainer.append(modalForm);
 // Dynamically Populate Modal Content card data
 const createTableRowData = (pokeObj, amt) => {
+  if (pokeObj.id === dealId) {
+    pokeObj.price = (pokeObj.price - pokeObj.price * sale).toFixed(2);
+  }
   const tr = document.createElement("tr");
   let total = (pokeObj.price * amt).toFixed(2);
   quantity += 1;
@@ -73,7 +76,6 @@ const getPokemon = (pokeId, qty) => {
       if (qty) {
         createTableRowData(data, qty);
         const arr = Array.from(document.querySelectorAll("#modal input"));
-        console.log("qty", arr);
       } else {
         const arr = Array.from(document.querySelectorAll("#modal tr"));
         if (arr.length === 1) {
@@ -99,6 +101,8 @@ const displayCartData = () => {
 // Mock order placement
 const placeOrder = (e) => {
   e.preventDefault();
+  console.log(userData);
+  userData.amountDue = totalPrice;
   modalContainer.classList.toggle("hide");
   alert("Order Placed!!!");
 };

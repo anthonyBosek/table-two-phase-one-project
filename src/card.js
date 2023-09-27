@@ -1,5 +1,4 @@
-
-const createCard = (pokemonObj, bool=false) => {
+const createCard = (pokemonObj, bool = false) => {
   card.innerHTML = "";
   card.className = "";
   card.classList.add(pokemonObj.type[0]);
@@ -61,12 +60,18 @@ const addCardToCart = (e) => {
   e.preventDefault();
   const qty = parseInt(e.target["card-qty"].value);
   const poke = document.getElementById("card-title").innerText;
-  if (!userData.items[poke]) {
-    userData.items[poke] = qty;
+  console.log(qty, poke);
+  if (qty) {
+    if (!userData.items[poke]) {
+      userData.items[poke] = qty;
+    } else {
+      userData.items[poke] += qty;
+    }
+    addToCart.reset();
+    alert(`${qty} ${poke} added to cart!`);
   } else {
-    userData.items[poke] += qty;
+    alert("Please enter a quantity");
   }
-  addToCart.reset();
 };
 
 addToCart.addEventListener("submit", addCardToCart);
