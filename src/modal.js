@@ -103,7 +103,9 @@ const displayCartData = () => {
 // Update Inventory when order is placed
 const patchInventory = (obj) => {
   searchObj;
-  obj.forEach((each) => {});
+  obj.forEach((each) => {
+    let _id = searchObj[each];
+  });
 };
 
 // Mock order placement
