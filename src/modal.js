@@ -41,7 +41,7 @@ const createTableRowData = (pokeObj, amt) => {
   quantity += 1;
   totalPrice += Number(total);
   tr.innerHTML = `
-        <td class="right-border width-15-pc">${amt}</td>
+        <input type="number" name="modal-card-qty" id="modal-card-qty" value="${amt}">
         <td class="right-border width-50-pc">${pokeObj.name}</td>
         <td class=" width-15-pc">$${pokeObj.price}</td>
         <td class="left-border  width-15-pc">$${total}</td>
@@ -89,5 +89,17 @@ const placeOrder = (e) => {
   modalContainer.classList.toggle("hide");
   alert("Order Placed!!!");
 };
+
+// const addCardToCart = (e) => {
+//   e.preventDefault();
+//   const qty = parseInt(e.target["card-qty"].value);
+//   const poke = document.getElementById("card-title").innerText;
+//   if (!userData.items[poke]) {
+//     userData.items[poke] = qty;
+//   } else {
+//     userData.items[poke] += qty;
+//   }
+//   addToCart.reset();
+// };
 
 modalForm.addEventListener("submit", placeOrder);
