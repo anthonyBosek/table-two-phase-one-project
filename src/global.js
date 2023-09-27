@@ -49,14 +49,21 @@ const createSearchObj = (pokemonArray) => {
   });
 };
 
-let randomId = Math.floor(Math.random() * 50) + 1; // Create random id for Deal of the Day
+const randomId = Math.floor(Math.random() * 50) + 1; // Create random id for Deal of the Day
+const sale = 0.2; // 20% off Deal of the Day
+let isDOD = true; // Deal of the Day
 const getOnePokemon = (_id = randomId) => {
   getJSON(`${URL}/${_id}`)
     .then((data) => {
-      let isDOD = cardBanner.innerText === "";
-      cardBanner.innerText = isDOD
-        ? "Deal of the Day!"
-        : (cardBanner.innerText = `${data.name} - $${data.price}`);
+      const { name, price } = data;
+      const salePrice = (price - price * sale).toFixed(2);
+      const saleString = `
+      Deal of the Day!
+      <br>
+      ${name} - <s>$${price}</s> <span>$${salePrice}</span>
+      `;
+      cardBanner.innerHTML = isDOD ? saleString : `${name} - $${price}`;
+      isDOD = false;
       createCard(data);
     })
     .catch((err) => console.log("Error: ", err));

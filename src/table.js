@@ -10,14 +10,13 @@ const displayPokemonTable = (pokemonArray) => {
     const cardQty = document.createElement("td");
     const cardPrice = document.createElement("td");
 
-    pokemonItem.addEventListener('click', () => {
-      createCard(pokemon)
-    })
+    pokemonItem.addEventListener("click", () => getOnePokemon(pokemon.id));
+
     pokemonImg.src = pokemon.ThumbnailImage;
     pokemonImg.alt = pokemon.name;
     pokemonName.textContent = pokemon.name;
     pokemonIndex.textContent = pokemon.number;
-    pokemonType.textContent = pokemon.type.join(", ");
+    pokemonType.textContent = pokemon.type[0];
     cardQty.textContent =
       pokemon.inventory === 0 ? "Out of Stock" : pokemon.inventory;
     cardPrice.textContent = `$${pokemon.price}`;
@@ -62,16 +61,15 @@ const displayPokemonTable = (pokemonArray) => {
 //eventLiseners
 filterByNumber.addEventListener("click", () => {
   selectPriceFilter.selectedIndex = 0;
-  selectTypeFilter.selectedIndex = 0; 
+  selectTypeFilter.selectedIndex = 0;
   selectQtyFilter.selectedIndex = 0;
   selectNameFilter.selectedIndex = 0;
   fetch(URL)
     .then((res) => res.json())
     .then((data) => {
-  displayPokemonTable(data)
-    })
+      displayPokemonTable(data);
+    });
 });
-
 
 selectTypeFilter.addEventListener("change", () => {
   selectQtyFilter.selectedIndex = 0;
@@ -119,16 +117,13 @@ selectTypeFilter.addEventListener("change", () => {
       } else if (selectFilterForType === "all") {
         const allTypes = data;
         displayPokemonTable(allTypes);
-        selectTypeFilter.target.reset('#price-filter')
-        
-        
-        
+        selectTypeFilter.target.reset("#price-filter");
       }
     });
 });
 
 selectPriceFilter.addEventListener("change", () => {
-  selectTypeFilter.selectedIndex = 0; 
+  selectTypeFilter.selectedIndex = 0;
   selectQtyFilter.selectedIndex = 0;
   selectNameFilter.selectedIndex = 0;
   fetch(URL)
@@ -141,7 +136,6 @@ selectPriceFilter.addEventListener("change", () => {
       } else if (selectFilterForPrice === "$") {
         const price$ = data.sort((a, b) => a.price - b.price);
         displayPokemonTable(price$);
-
       }
     });
 });
@@ -149,7 +143,7 @@ selectPriceFilter.addEventListener("change", () => {
 selectQtyFilter.addEventListener("change", () => {
   selectNameFilter.selectedIndex = 0;
   selectPriceFilter.selectedIndex = 0;
-  selectTypeFilter.selectedIndex = 0; 
+  selectTypeFilter.selectedIndex = 0;
   fetch(URL)
     .then((res) => res.json())
     .then((data) => {
@@ -166,7 +160,7 @@ selectQtyFilter.addEventListener("change", () => {
 
 selectNameFilter.addEventListener("change", () => {
   selectPriceFilter.selectedIndex = 0;
-  selectTypeFilter.selectedIndex = 0; 
+  selectTypeFilter.selectedIndex = 0;
   selectQtyFilter.selectedIndex = 0;
   fetch(URL)
     .then((res) => res.json())
