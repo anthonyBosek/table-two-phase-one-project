@@ -112,6 +112,7 @@ main {
 }
 #box {
   padding-right: 30px;
+  padding-left: 30px;
 }
 tr {
   text-align: center;
@@ -208,7 +209,7 @@ td img {
   color: red;
 }
 #card-img {
-  max-width: 83%;
+  max-width: 85%;
   border: 5px solid rgb(255, 236, 80);
   background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/81ccfdb7-ac1d-423f-a276-af63abae5ba2/d5oujyw-580a0eed-e966-46c3-b46c-19ad3e890981.png/v1/fit/w_429,h_614,q_70,strp/water__bw__texture_by_pkmncardmaker264_d5oujyw-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjE0IiwicGF0aCI6IlwvZlwvODFjY2ZkYjctYWMxZC00MjNmLWEyNzYtYWY2M2FiYWU1YmEyXC9kNW91anl3LTU4MGEwZWVkLWU5NjYtNDZjMy1iNDZjLTE5YWQzZTg5MDk4MS5wbmciLCJ3aWR0aCI6Ijw9NDI5In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.6vfShTuSTxItZrdM2HzCBsDrEkjnNwILQs5R6m6KOpQ");
   margin: 0 auto;
