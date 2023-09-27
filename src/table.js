@@ -60,9 +60,10 @@ const displayPokemonTable = (pokemonArray) => {
 
 //eventLiseners
 
- card.addEventListener( 'click', function() {
-    card.classList.toggle('is-flipped')
-  });
+cardContainer.addEventListener("click", function () {
+  card.classList.add("unflip");
+});
+
 
 filterByNumber.addEventListener("click", () => {
   selectPriceFilter.selectedIndex = 0;
