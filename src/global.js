@@ -50,10 +50,12 @@ const createSearchObj = (pokemonArray) => {
   });
 };
 
-const randomId = Math.floor(Math.random() * 50) + 1; // Create random id for Deal of the Day
+// Deal of the Day Variables
+const dealId = Math.floor(Math.random() * 50) + 1; // Create random id for Deal of the Day
 const sale = 0.2; // 20% off Deal of the Day
 let isDOD = true; // Deal of the Day
-const getOnePokemon = (_id = randomId) => {
+// Get one pokemon from inventory
+const getOnePokemon = (_id = dealId) => {
   getJSON(`${URL}/${_id}`)
     .then((data) => {
       const { name, price } = data;

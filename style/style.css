@@ -258,7 +258,8 @@ td img {
   font-weight: bold;
   color: red;
 }
-#card-subtitle {
+#card-subtitle,
+td.sale {
   color: red;
 }
 #card-img {
