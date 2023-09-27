@@ -29,6 +29,7 @@ const cardContainer = document.querySelector("#card-container");
 const card = document.getElementById("card");
 const cardBanner = document.getElementById("card-banner");
 const addToCart = document.getElementById("add-to-cart-form");
+const cardQty = document.getElementById("card-qty");
 
 // Modal Variables
 let totalPrice = 0;
@@ -50,10 +51,12 @@ const createSearchObj = (pokemonArray) => {
   });
 };
 
-const randomId = Math.floor(Math.random() * 50) + 1; // Create random id for Deal of the Day
+// Deal of the Day Variables
+const dealId = Math.floor(Math.random() * 50) + 1; // Create random id for Deal of the Day
 const sale = 0.2; // 20% off Deal of the Day
 let isDOD = true; // Deal of the Day
-const getOnePokemon = (_id = randomId) => {
+// Get one pokemon from inventory
+const getOnePokemon = (_id = dealId) => {
   getJSON(`${URL}/${_id}`)
     .then((data) => {
       const { name, price } = data;
@@ -63,8 +66,10 @@ const getOnePokemon = (_id = randomId) => {
       <br>
       ${isDOD ? "XXXXX" : name} - <s>$${price}</s> <span>$${salePrice}</span>
       `;
-      cardBanner.innerHTML = isDOD ? saleString : `${name} - $${price}`;
+      cardBanner.innerHTML =
+        data.id === dealId ? saleString : `${name} - $${price}`;
       createCard(data, isDOD);
+
       isDOD = false;
     })
     .catch((err) => console.log("Error: ", err));

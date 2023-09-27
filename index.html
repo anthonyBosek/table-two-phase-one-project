@@ -59,6 +59,7 @@
       <div id="modal-container" class="hide">
         <div id="modal">
           <span id="modal-close"><i class="fa fa-close"></i></span>
+          <hr />
         </div>
       </div>
 
@@ -116,9 +117,16 @@
       <!-- Card -->
       <div id="card-container">
         <h1 id="card-banner"></h1>
-          <div id="card"></div>
+        <div id="card"></div>
         <form id="add-to-cart-form">
-          <input type="number" name="card-qty" id="card-qty" value="1" />
+          <input
+            type="number"
+            name="card-qty"
+            id="card-qty"
+            value="1"
+            max=""
+            min="0"
+          />
           <input type="submit" value="Add to Cart" />
         </form>
       </div>

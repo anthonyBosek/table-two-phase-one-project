@@ -255,8 +255,12 @@ td img {
   font-weight: bold;
   color: red;
 }
-#card-subtitle {
+#card-subtitle,
+td.sale {
   color: red;
+}
+s {
+  color: var(--main-txt-color);
 }
 #card-img {
   max-width: 85%;
@@ -311,7 +315,7 @@ td img {
   height: 62%;
   width: 62%;
   background: var(--primary-color);
-  padding: 30px;
+  padding: 50px;
   min-width: 290px;
   border-radius: 10px;
   position: relative;

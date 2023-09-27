@@ -19,7 +19,15 @@ const displayPokemonTable = (pokemonArray) => {
     pokemonType.textContent = pokemon.type[0];
     cardQty.textContent =
       pokemon.inventory === 0 ? "Out of Stock" : pokemon.inventory;
-    cardPrice.textContent = `$${pokemon.price}`;
+    if (pokemon.id === dealId) {
+      cardPrice.classList.add("sale");
+      cardPrice.innerHTML = `<s>$${pokemon.price}</s> $${(
+        pokemon.price -
+        pokemon.price * sale
+      ).toFixed(2)}`;
+    } else {
+      cardPrice.textContent = `$${pokemon.price}`;
+    }
 
     if (pokemon.type[0] === "grass") {
       pokemonItem.classList.add("table-success");
