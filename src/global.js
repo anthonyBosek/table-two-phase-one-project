@@ -25,6 +25,7 @@ const mode = document.getElementById("mode");
 const cart = document.getElementById("cart");
 
 // Card Variables
+const cardContainer = document.querySelector("#card-container");
 const card = document.getElementById("card");
 const cardBanner = document.getElementById("card-banner");
 const addToCart = document.getElementById("add-to-cart-form");
@@ -60,11 +61,11 @@ const getOnePokemon = (_id = randomId) => {
       const saleString = `
       Deal of the Day!
       <br>
-      ${name} - <s>$${price}</s> <span>$${salePrice}</span>
+      ${isDOD ? "XXXXX" : name} - <s>$${price}</s> <span>$${salePrice}</span>
       `;
       cardBanner.innerHTML = isDOD ? saleString : `${name} - $${price}`;
+      createCard(data, isDOD);
       isDOD = false;
-      createCard(data);
     })
     .catch((err) => console.log("Error: ", err));
 };

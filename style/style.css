@@ -206,21 +206,9 @@ td img {
   -webkit-backface-visibility: hidden;
 }
 
-.test {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  left: 30px;
-  top: 30px;
-  background-color: lightgreen;
-  transition: all 2s linear;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-}
 
-#card:after {
+
+.flip:after {
   content: "";
   right: 0px;
   bottom: 0px;
@@ -239,9 +227,18 @@ td img {
   -webkit-backface-visibility: hidden;
 }
 
-#card-container:hover #card {
+#card-container .flip {
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
+}
+
+#card-container .unflip {
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+}
+
+.hideDeal {
+  background: #000000;
 }
 
 #card-header {
