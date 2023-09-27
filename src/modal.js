@@ -2,7 +2,7 @@
 const div = document.createElement("div");
 const h2 = document.createElement("h2");
 const span1 = document.createElement("span");
-h2.textContent = `Customer No.: `;
+h2.textContent = `Customer No: `;
 h2.append(span1);
 const hr1 = document.createElement("hr");
 const span2 = document.createElement("span");
@@ -94,7 +94,6 @@ const displayCartData = () => {
   for (let each in userData.items) {
     getPokemon(`${searchObj[each]}`, userData.items[each]);
   }
-
 };
 
 // Mock order placement
@@ -106,10 +105,10 @@ const placeOrder = (e) => {
 
 const updateOrder = (e) => {
   const modalRow = e.target.parentElement;
-  const nameTD = modalRow.querySelector("td").textContent
+  const nameTD = modalRow.querySelector("td").textContent;
   const qtyInput = Number(modalRow.querySelector("input").value);
   userData.items[nameTD] = qtyInput;
   displayCartData();
-}
+};
 
 modalForm.addEventListener("submit", placeOrder);

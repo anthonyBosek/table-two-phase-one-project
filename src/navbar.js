@@ -56,7 +56,7 @@ searchInput.addEventListener("keyup", (e) => {
 });
 search.addEventListener("submit", (e) => {
   e.preventDefault();
-  if (searchInput.value === "") return;
+  if (searchInput.value === "") alert("Enter a Pokemon name!");
   let searchValue =
     searchInput.value[0].toUpperCase() +
     searchInput.value.slice(1).toLowerCase();
