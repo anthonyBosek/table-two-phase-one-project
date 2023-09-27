@@ -237,10 +237,6 @@ td img {
   -webkit-transform: rotateY(0deg);
 }
 
-.hideDeal {
-  background: #000000;
-}
-
 #card-header {
   display: flex;
   justify-content: space-between;
@@ -249,6 +245,7 @@ td img {
 }
 #card-banner {
   text-align: center;
+  height: 98px;
 }
 #card-banner > span {
   font-size: 1.02em;
@@ -259,7 +256,7 @@ td img {
 td.sale {
   color: red;
 }
-s {
+s, #card-banner > #hide-deal {
   color: var(--main-txt-color);
 }
 #card-img {
@@ -444,7 +441,7 @@ footer {
   #card-container {
     width: 100%;
     padding-top: 30px;
-    max-width: 400px;
+    max-width: 500px;
   }
   #card {
     width: 290px;
