@@ -1,4 +1,5 @@
 // Populate Modal Content
+const div = document.createElement("div");
 const h2 = document.createElement("h2");
 const span1 = document.createElement("span");
 h2.textContent = `Customer No.: `;
@@ -32,7 +33,8 @@ const modalForm = document.createElement("form");
 modalForm.innerHTML = `
   <button id="modal-submit" type="submit">Place Order</button>
 `;
-modal.append(h2, hr1, nameH4, hr2, amtH4, hr3, table, modalForm);
+div.append(h2, hr1, nameH4, hr2, amtH4, hr3, table, modalForm);
+modal.appendChild(div);
 
 // Dynamically Populate Modal Content card data
 const createTableRowData = (pokeObj, amt) => {

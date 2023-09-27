@@ -256,25 +256,29 @@ td img {
   z-index: 2;
 }
 #modal {
-  height: 60%;
-  width: 60%;
-  background: #161616;
-  padding: 10px;
+  height: 62%;
+  width: 62%;
+  background: var(--primary-color);
+  /* background: #161616; */
+  padding: 30px;
   min-width: 290px;
   border-radius: 10px;
-  overflow: auto;
   position: relative;
 }
 #modal-close {
-  /* color: var(--main-txt-color); */
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 20px;
   font-size: 2em;
-  margin-right: 15px;
+  /* margin-right: 15px; */
 }
-
+#modal > div {
+  margin-top: 20px;
+}
 #modal,
 #modal-close {
-  color: #eee;
+  color: var(--main-txt-color);
+  /* color: #eee; */
 }
 
 #modal tr {
