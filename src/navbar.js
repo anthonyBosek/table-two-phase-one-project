@@ -43,6 +43,7 @@ const searchData = (str) => {
   });
   createDropdown(matches);
 };
+// Search Bar Event Listeners
 searchInput.addEventListener("focus", () => {
   searchInput.classList.toggle("focus");
 });
@@ -55,6 +56,17 @@ searchInput.addEventListener("keyup", (e) => {
 });
 search.addEventListener("submit", (e) => {
   e.preventDefault();
+  if (searchInput.value === "") return;
+  let searchValue =
+    searchInput.value[0].toUpperCase() +
+    searchInput.value.slice(1).toLowerCase();
+  if (Object.keys(searchObj).includes(searchValue)) {
+    getOnePokemon(searchObj[searchValue]);
+    dropdownContent.classList.remove("show");
+    search.reset();
+  } else {
+    alert("Pokemon not found!");
+  }
 });
 
 // Light/Dark Mode Toggle
