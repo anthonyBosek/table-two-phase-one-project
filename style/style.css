@@ -262,6 +262,9 @@ td img {
 td.sale {
   color: red;
 }
+s {
+  color: var(--main-txt-color);
+}
 #card-img {
   max-width: 85%;
   border: 5px solid rgb(255, 236, 80);
