@@ -19,6 +19,7 @@ const hr3 = document.createElement("hr");
 const modalTable = document.createElement("div");
 const table = document.createElement("table");
 const tableHead = document.createElement("thead");
+let cardAmounts = {};
 tableHead.innerHTML = `
   <tr>
     <th class="right-border width-15-pc">Qty</th>
@@ -53,15 +54,16 @@ const createTableRowData = (pokeObj, amt) => {
   input.value = amt;
   input.max = pokeObj.inventory;
   input.min = 0;
+  cardAmounts[pokeObj.name] = amt;
   input.addEventListener("change", updateOrder);
   tr.innerHTML = `
         <td class="right-border width-50-pc">${pokeObj.name}</td>
-        <td class=" width-15-pc">$${pokeObj.price}</td>
-        <td class="left-border  width-15-pc">$${total}</td>
+        <td class="eachPrice width-15-pc">$${pokeObj.price}</td>
+        <td class="left-border totalPrice  width-15-pc">$${total}</td>
     `;
   tr.insertAdjacentElement("afterbegin", input);
   tableBody.append(tr);
-  span3.textContent = `$ ${totalPrice.toFixed(2)}`;
+  span3.textContent = `$${totalPrice.toFixed(2)}`;
 };
 
 // Grab Current pokemon data & add to table
@@ -121,15 +123,15 @@ const placeOrder = (e) => {
     alert("Please add items to your cart");
   } else {
     patchInventory(items);
-    amountDue = totalPrice;
     modalContainer.classList.toggle("hide");
     alert(
-      `Thank you ${name} your order for $${amountDue.toFixed(2)} was placed!`
+      `Thank you ${name} your order for $${amountDue} was placed!`
     );
     amountDue = 0;
     userData.items = {};
     tableBody.innerHTML = "";
     span3.textContent = ""
+    cardAmounts = {};
   }
 };
 
@@ -138,8 +140,16 @@ const updateOrder = (e) => {
   const modalRow = e.target.parentElement;
   const nameTD = modalRow.querySelector("td").textContent;
   const qtyInput = Number(modalRow.querySelector("input").value);
+  const eachPrice = Number(modalRow.querySelector(".eachPrice").textContent.split("$")[1]);
+  const trTotalPrice = modalRow.querySelector(".totalPrice");
+  const newAmt = qtyInput - cardAmounts[nameTD];
+  const newTotalPrice = (Number(span3.textContent.split("$")[1]) + Number(newAmt * eachPrice)).toFixed(2); 
+  userData.amountDue = newTotalPrice;
+  totalPrice = newTotalPrice;
   userData.items[nameTD] = [qtyInput, userData.items[nameTD][1]];
-  displayCartData();
+  trTotalPrice.textContent = `$${(qtyInput * eachPrice).toFixed(2)}`;
+  span3.textContent = `$${newTotalPrice}`;
+  cardAmounts[nameTD] = qtyInput;
 };
 
 modalForm.addEventListener("submit", placeOrder);
