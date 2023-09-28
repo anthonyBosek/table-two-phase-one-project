@@ -129,6 +129,7 @@ const placeOrder = (e) => {
     );
     amountDue = 0;
     items = {};
+    modalForm.reset();
   }
 };
 
