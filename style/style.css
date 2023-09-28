@@ -37,6 +37,7 @@ nav {
   padding: 1% 5% 0;
 }
 #header {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,6 +56,7 @@ nav {
   width: 225px;
 }
 .icon {
+  cursor: pointer;
   color: var(--main-txt-color);
   font-size: 2em;
 }
@@ -122,6 +124,9 @@ tr {
   top: 0;
   z-index: 1;
 }
+select {
+  cursor: pointer;
+}
 
 thead {
   opacity: 75%;
@@ -130,6 +135,9 @@ thead {
 td img {
   width: 30px;
   margin-right: 10px;
+}
+#number {
+  cursor: pointer;
 }
 
 .scale {
@@ -216,6 +224,7 @@ td img {
   background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4f7705ec-8c49-4eed-a56e-c21f3985254c/dah43cy-a8e121cb-934a-40f6-97c7-fa2d77130dd5.png/v1/fill/w_759,h_1053/pokemon_card_backside_in_high_resolution_by_atomicmonkeytcg_dah43cy-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTQyMCIsInBhdGgiOiJcL2ZcLzRmNzcwNWVjLThjNDktNGVlZC1hNTZlLWMyMWYzOTg1MjU0Y1wvZGFoNDNjeS1hOGUxMjFjYi05MzRhLTQwZjYtOTdjNy1mYTJkNzcxMzBkZDUucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.9GzaYS7sd8RPY5FlHca09J9ZQZ9D9zI69Ru-BsbkLDA");
   background-position: center;
   background-size: contain;
+  transition: all 0.4s linear;
   background-repeat: no-repeat;
   transform-style: preserve-3d;
   backface-visibility: hidden;
@@ -235,10 +244,6 @@ td img {
   -webkit-transform: rotateY(0deg);
 }
 
-.hideDeal {
-  background: #000000;
-}
-
 #card-header {
   display: flex;
   justify-content: space-between;
@@ -247,6 +252,7 @@ td img {
 }
 #card-banner {
   text-align: center;
+  height: 98px;
 }
 #card-banner > span {
   font-size: 1.02em;
@@ -257,9 +263,15 @@ td img {
 td.sale {
   color: red;
 }
+
 td s {
   color: #333333;
 }
+
+s, #card-banner > #hide-deal {
+  color: var(--main-txt-color);
+}
+
 #card-img {
   max-width: 85%;
   border: 5px solid rgb(255, 236, 80);
@@ -464,7 +476,7 @@ footer {
   #card-container {
     width: 100%;
     padding-top: 30px;
-    max-width: 400px;
+    max-width: 500px;
   }
   #card {
     width: 290px;

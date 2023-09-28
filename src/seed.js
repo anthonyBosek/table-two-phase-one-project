@@ -1,7 +1,13 @@
 /* Global Variables */
-// const pokemonUrl = "http://localhost:3000/pokemon?_limit=50";
+
+/* URL to get the first 25 pokemon */
 const pokemonUrl = "http://localhost:3000/pokemon?_limit=25";
+
+/* URL to get the second 25 pokemon in db.json to be used in conjunction with a commented out splice on line 79 */
+// const pokemonUrl = "http://localhost:3000/pokemon?_limit=50";
+
 const postPokemonUrl = "http://localhost:3000/inventory";
+/* An array of Pokemon keywords that will added to the card data randomly before seeding the 'inventory' database to be used for the page */
 const weaknessArray = [
   "Bug",
   "Poison",
@@ -69,7 +75,8 @@ const getAllPokemon = () => {
       }
     })
     .then((data) => {
-      // data = data.slice(25);
+      /* To be used with second 'pokemonUrl' */
+      /* data = data.slice(25); */
       data.forEach((item) => updatePokemon(item));
     })
     .catch((err) => alert(err));

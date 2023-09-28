@@ -88,13 +88,15 @@ const getPokemon = (pokeId, qty) => {
     .catch((err) => alert(err));
 };
 
-// Display Cart Data when cart icon is clicked
+/* Display Cart Data in modal when cart icon is clicked */
 const displayCartData = () => {
+  /* Reset the info in the modal */
   span1.textContent = userData.customerNumber;
   span2.textContent = userData.name;
   tableBody.innerHTML = "";
   totalPrice = 0;
   quantity = 0;
+  /* Iterate through the 'items' property of 'userData' to display a table row in the modal for card name in the user's cart */
   for (let each in userData.items) {
     getPokemon(`${searchObj[each]}`, userData.items[each][0]);
   }
@@ -130,6 +132,7 @@ const placeOrder = (e) => {
   }
 };
 
+/* Function that will grab the name and the quantity from the table row of the target of the event that called the function, adjust the quantity in 'userData', and update the info in the modal */
 const updateOrder = (e) => {
   const modalRow = e.target.parentElement;
   const nameTD = modalRow.querySelector("td").textContent;
