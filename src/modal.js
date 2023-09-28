@@ -77,11 +77,10 @@ const getPokemon = (pokeId, qty) => {
     .then((data) => {
       if (qty) {
         createTableRowData(data, qty);
-        // const arr = Array.from(document.querySelectorAll("#modal input"));
       } else {
         const arr = Array.from(document.querySelectorAll("#modal tr"));
         if (arr.length === 1) {
-          span3.textContent = "$0.00";
+          span3.textContent = "";
         }
       }
     })
@@ -128,8 +127,9 @@ const placeOrder = (e) => {
       `Thank you ${name} your order for $${amountDue.toFixed(2)} was placed!`
     );
     amountDue = 0;
-    items = {};
-    modalForm.reset();
+    userData.items = {};
+    tableBody.innerHTML = "";
+    span3.textContent = ""
   }
 };
 

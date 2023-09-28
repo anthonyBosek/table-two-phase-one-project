@@ -75,6 +75,7 @@
 - The project was completed with collaboration from: `Anthony Bosek`, `Austin Ohlfs`, and `Brian Richie Sr.`
 - This project was created with combination of skills learned from the `Flatiron` curriculum and our own individual research.
 - The data used to seed the original data prior to being modified for the purposes of this project was supplied by [Pokedex](https://rapidapi.com/lduran2-CvRRB1hLBCj/api/pokedex2) created by `Luis Duran`.
+- And of course, [Stack Overflow](https://stackoverflow.com/).
 
 ## What I Learned
 
