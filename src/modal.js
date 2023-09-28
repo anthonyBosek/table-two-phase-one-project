@@ -77,7 +77,7 @@ const getPokemon = (pokeId, qty) => {
     .then((data) => {
       if (qty) {
         createTableRowData(data, qty);
-        const arr = Array.from(document.querySelectorAll("#modal input"));
+        // const arr = Array.from(document.querySelectorAll("#modal input"));
       } else {
         const arr = Array.from(document.querySelectorAll("#modal tr"));
         if (arr.length === 1) {
@@ -96,35 +96,45 @@ const displayCartData = () => {
   totalPrice = 0;
   quantity = 0;
   for (let each in userData.items) {
-    getPokemon(`${searchObj[each]}`, userData.items[each]);
+    getPokemon(`${searchObj[each]}`, userData.items[each][0]);
   }
 };
 
 // Update Inventory when order is placed
 const patchInventory = (obj) => {
-  searchObj;
-  obj.forEach((each) => {
-    let _id = searchObj[each];
-  });
+  for (let key in obj) {
+    let _id = searchObj[key];
+    let qty = obj[key][1] - obj[key][0];
+    patchJSON(`${URL}/${_id}`, { inventory: qty })
+      .then((data) => getInventory())
+      .catch((err) => console.log("Error: ", err));
+  }
 };
 
 // Mock order placement
 const placeOrder = (e) => {
   e.preventDefault();
-  console.log(userData);
-  userData.amountDue = totalPrice;
-  patchInventory(userData.items);
-  modalContainer.classList.toggle("hide");
-  alert("Order Placed!!!");
-  userData.amountDue = 0;
-  userData.items = {};
+  let { items, amountDue, name } = userData;
+  const isEmpty = Object.keys(items).length === 0;
+  if (isEmpty) {
+    alert("Please add items to your cart");
+  } else {
+    patchInventory(items);
+    amountDue = totalPrice;
+    modalContainer.classList.toggle("hide");
+    alert(
+      `Thank you ${name} your order for $${amountDue.toFixed(2)} was placed!`
+    );
+    amountDue = 0;
+    items = {};
+  }
 };
 
 const updateOrder = (e) => {
   const modalRow = e.target.parentElement;
   const nameTD = modalRow.querySelector("td").textContent;
   const qtyInput = Number(modalRow.querySelector("input").value);
-  userData.items[nameTD] = qtyInput;
+  userData.items[nameTD] = [qtyInput, userData.items[nameTD][1]];
   displayCartData();
 };
 

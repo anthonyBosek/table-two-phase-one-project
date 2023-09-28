@@ -59,13 +59,14 @@ const createCard = (pokemonObj, bool = false) => {
 const addCardToCart = (e) => {
   e.preventDefault();
   const qty = parseInt(e.target["card-qty"].value);
+  const max = parseInt(e.target["card-qty"].max);
   const poke = document.getElementById("card-title").innerText;
-  console.log(qty, poke);
   if (qty) {
     if (!userData.items[poke]) {
-      userData.items[poke] = qty;
+      userData.items[poke] = [qty, max];
     } else {
-      userData.items[poke] += qty;
+      userData.items[poke][0] += qty;
+      userData.items[poke][1] = max;
     }
     addToCart.reset();
     alert(`${qty} ${poke} added to cart!`);
