@@ -197,6 +197,7 @@ td img {
   flex-direction: column;
   min-height: 80%;
 }
+/* Got help on card flip code from this page - https://stackoverflow.com/questions/17529982/how-can-i-style-the-backface-of-a-rotated-element */
 #card {
   color: #000000;
   height: 550px;
@@ -392,7 +393,7 @@ s, #card-banner > #hide-deal {
 
 #modal-submit {
   position: absolute;
-  bottom: 50px;
+  bottom: 11px;
   width: 200px;
   transition: all 0.2s linear;
 }
@@ -443,8 +444,16 @@ s, #card-banner > #hide-deal {
   display: none;
 }
 
-.hidden {
+.hidden-text, .hidden {
   visibility: hidden;
+}
+
+.hidden-text {
+  height: 0;
+  margin: -1px;
+}
+
+.hidden {
   height: 100px;
 }
 
@@ -499,6 +508,12 @@ footer {
   }
   #card-vitals {
     font-size: 0.6em;
+  }
+}
+
+@media (max-width: 768px) {
+  #modal {
+    padding: 50px 25px;
   }
 }
 

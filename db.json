@@ -1,18 +1,4 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "username": "Austin Ohlfs"
-    },
-    {
-      "id": 2,
-      "username": "Brian Richie"
-    },
-    {
-      "id": 3,
-      "username": "Anthony Bosek"
-    }
-  ],
   "inventory": [
     {
       "number": "001",

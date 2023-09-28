@@ -158,7 +158,7 @@ selectTypeFilter.addEventListener("change", () => {
         const bugPrice$$$ = bugPriceFilter.sort((a, b) => b.price - a.price);
         displayPokemonTable(bugPrice$$$);
       } else if (
-        selectFilterForType === "grass" &&
+        selectFilterForType === "bug" &&
         selectFilterForPrice === "$"
       ) {
         const bugPriceFilter = data.filter(
