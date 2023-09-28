@@ -67,7 +67,10 @@ const getOnePokemon = (_id = dealId) => {
       XXXXX - <s>$${price}</s> <span>$${salePrice}</span>
       `;
       cardBanner.innerHTML =
-        data.id === dealId ? saleString : `${name} - $${price}`;
+        data.id === dealId ? saleString 
+          : `<p class="hidden-text">Deal of the Day!</p>
+            <br>
+            ${name} - $${price}`;
       createCard(data, isDOD);
 
       isDOD = false;

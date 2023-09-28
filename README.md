@@ -24,9 +24,9 @@
 
 - You must have access to these dependencies in the directory that you are running this application in. If your environment does not have these requirements, you may install them in this order by going to these websites and following the installation instructions:
 
-- Node: `https://www.npmjs.com/package/node`
+- [Npm - Node.JS](https://www.npmjs.com/package/node)
 
-- JSON Server: `https://www.npmjs.com/package/json-server`
+- [Npm - JSON Server](https://www.npmjs.com/package/json-server)
 
 
 ## Starting the Application
@@ -75,11 +75,12 @@
 - The project was completed with collaboration from: `Anthony Bosek`, `Austin Ohlfs`, and `Brian Richie Sr.`
 - This project was created with combination of skills learned from the `Flatiron` curriculum and our own individual research.
 - The data used to seed the original data prior to being modified for the purposes of this project was supplied by [Pokedex](https://rapidapi.com/lduran2-CvRRB1hLBCj/api/pokedex2) created by `Luis Duran`.
+- And of course, [Stack Overflow](https://stackoverflow.com/).
 
 ## What I Learned
 
-- `Anthony`: 
-- `Austin`: 
+- `Anthony`: Building this app was great! It incorporated some of the fundamentals of `JavaScript` in a new and exciting way. I learned how to use event listeners to simulate a hover effect on select elements with ‘mouseenter’ & ‘mouseleave’. I learned how to navigate the difficulties of adding a patch request to update a db with new data. And I gained valuable insight into the experience of working as a team on one joint repo and codebase. Awesome experience, stellar team!!
+- `Austin`: Working with Brian and Anthony on our phase one project has been an eye opening experience. Collaborating with a team on building different features that come together to create a real life model of an idea that started out on paper is not easy. I learned that maintaining proper communication with our team and a disciplined GitHub flow are key factors that allowed us to finish our project without many hick-ups and in a timely manner. I appreciated working with Brian and Anthony. Their experience, knowledge, and ability to communicate has made working on this project a great learning experience!
 - `Brian`: I learned a bit about the complexities of the `GitHub` repositories and a bit about the power of the `GitHub` interface. Pushing and pulling into the repository while code is being altered will inevitably lead to conflicts. However, with good communication and knowledge gained, we were able to overcome the conflicts efficiently and continue to complete this project. And as always, I learned a great deal from the people I worked with on this project. The intelligence and creativity of my teammates is amazing. Thank you Anthony, Austin, and the `Flatiron` community.
 
 
