@@ -16,6 +16,7 @@ const span3 = document.createElement("span");
 amtH4.textContent = `Amount Due: `;
 amtH4.append(span3);
 const hr3 = document.createElement("hr");
+const modalTable = document.createElement("div");
 const table = document.createElement("table");
 const tableHead = document.createElement("thead");
 tableHead.innerHTML = `
@@ -31,12 +32,16 @@ table.append(tableHead, tableBody);
 table.classList.add("width-100-pc");
 const modalForm = document.createElement("form");
 modalForm.innerHTML = `
-  <button id="modal-submit" type="submit">Place Order</button>
+  <input id="modal-submit" type="submit" value="Place Order" >
 `;
-modal.append(h2, hr1, nameH4, hr2, amtH4, hr3, table);
-modalContainer.append(modalForm);
+modalTable.append(table);
+modal.append(h2, hr1, nameH4, hr2, amtH4, hr3, modalTable);
+modal.append(modalForm);
 // Dynamically Populate Modal Content card data
 const createTableRowData = (pokeObj, amt) => {
+  if (pokeObj.id === dealId) {
+    pokeObj.price = (pokeObj.price - pokeObj.price * sale).toFixed(2);
+  }
   const tr = document.createElement("tr");
   let total = (pokeObj.price * amt).toFixed(2);
   quantity += 1;
@@ -72,8 +77,7 @@ const getPokemon = (pokeId, qty) => {
     .then((data) => {
       if (qty) {
         createTableRowData(data, qty);
-        const arr = Array.from(document.querySelectorAll("#modal input"));
-        console.log("qty", arr);
+        // const arr = Array.from(document.querySelectorAll("#modal input"));
       } else {
         const arr = Array.from(document.querySelectorAll("#modal tr"));
         if (arr.length === 1) {
@@ -94,15 +98,38 @@ const displayCartData = () => {
   quantity = 0;
   /* Iterate through the 'items' property of 'userData' to display a table row in the modal for card name in the user's cart */
   for (let each in userData.items) {
-    getPokemon(`${searchObj[each]}`, userData.items[each]);
+    getPokemon(`${searchObj[each]}`, userData.items[each][0]);
+  }
+};
+
+// Update Inventory when order is placed
+const patchInventory = (obj) => {
+  for (let key in obj) {
+    let _id = searchObj[key];
+    let qty = obj[key][1] - obj[key][0];
+    patchJSON(`${URL}/${_id}`, { inventory: qty })
+      .then((data) => getInventory())
+      .catch((err) => console.log("Error: ", err));
   }
 };
 
 // Mock order placement
 const placeOrder = (e) => {
   e.preventDefault();
-  modalContainer.classList.toggle("hide");
-  alert("Order Placed!!!");
+  let { items, amountDue, name } = userData;
+  const isEmpty = Object.keys(items).length === 0;
+  if (isEmpty) {
+    alert("Please add items to your cart");
+  } else {
+    patchInventory(items);
+    amountDue = totalPrice;
+    modalContainer.classList.toggle("hide");
+    alert(
+      `Thank you ${name} your order for $${amountDue.toFixed(2)} was placed!`
+    );
+    amountDue = 0;
+    items = {};
+  }
 };
 
 /* Function that will grab the name and the quantity from the table row of the target of the event that called the function, adjust the quantity in 'userData', and update the info in the modal */
@@ -110,7 +137,7 @@ const updateOrder = (e) => {
   const modalRow = e.target.parentElement;
   const nameTD = modalRow.querySelector("td").textContent;
   const qtyInput = Number(modalRow.querySelector("input").value);
-  userData.items[nameTD] = qtyInput;
+  userData.items[nameTD] = [qtyInput, userData.items[nameTD][1]];
   displayCartData();
 };
 

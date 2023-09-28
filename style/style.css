@@ -214,8 +214,6 @@ td img {
   -webkit-backface-visibility: hidden;
 }
 
-
-
 .flip:after {
   content: "";
   right: 0px;
@@ -265,9 +263,15 @@ td img {
 td.sale {
   color: red;
 }
+
+td s {
+  color: #333333;
+}
+
 s, #card-banner > #hide-deal {
   color: var(--main-txt-color);
 }
+
 #card-img {
   max-width: 85%;
   border: 5px solid rgb(255, 236, 80);
@@ -364,10 +368,32 @@ s, #card-banner > #hide-deal {
   padding: 10px;
 }
 
-#modal-submit {
+#modal > div {
+  height: 65%;
+  overflow-y: scroll;
+}
+
+#modal > div::-webkit-scrollbar {
+  display: none;
+}
+
+#modal > div > table > thead {
+  color: var(--main-txt-color);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: 2px solid var(--bs-border-color);
+}
+
+#modal > form {
   display: flex;
   justify-content: center;
-  width: 100%;
+}
+
+#modal-submit {
+  position: absolute;
+  bottom: 50px;
+  width: 200px;
   transition: all 0.2s linear;
 }
 

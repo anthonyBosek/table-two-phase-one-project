@@ -1,5 +1,5 @@
 /* Function that takes two arguments, an object and a boolean to create a card to be displayed on page */
-const createCard = (pokemonObj, bool=false) => {
+const createCard = (pokemonObj, bool = false) => {
   /* Empty out the card elements and classes */
   card.innerHTML = "";
   card.className = "";
@@ -68,13 +68,20 @@ const createCard = (pokemonObj, bool=false) => {
 const addCardToCart = (e) => {
   e.preventDefault();
   const qty = parseInt(e.target["card-qty"].value);
+  const max = parseInt(e.target["card-qty"].max);
   const poke = document.getElementById("card-title").innerText;
-  if (!userData.items[poke]) {
-    userData.items[poke] = qty;
+  if (qty) {
+    if (!userData.items[poke]) {
+      userData.items[poke] = [qty, max];
+    } else {
+      userData.items[poke][0] += qty;
+      userData.items[poke][1] = max;
+    }
+    addToCart.reset();
+    alert(`${qty} ${poke} added to cart!`);
   } else {
-    userData.items[poke] += qty;
+    alert("Please enter a quantity");
   }
-  addToCart.reset();
 };
 
 /* Add a submit event listener to 'addCardToCart */
