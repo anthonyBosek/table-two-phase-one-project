@@ -14,6 +14,7 @@
 
 ## Intro To Project
 
+- This project is a site where a user can review and buy `Pokemon` cards.
 - This project was made to complete the assignment `Phase 1 Project` for the `SE-West-091123` class for the [Flatiron](https://flatironschool.com/) Software Engineering Boot Camp.
 - The project was completed using the following: `JavaScript`, `HTML`, `CSS`, `Bootstrap`.
 
@@ -75,7 +76,8 @@
 - The project was completed with collaboration from: `Anthony Bosek`, `Austin Ohlfs`, and `Brian Richie Sr.`
 - This project was created with combination of skills learned from the `Flatiron` curriculum and our own individual research.
 - The data used to seed the original data prior to being modified for the purposes of this project was supplied by [Pokedex](https://rapidapi.com/lduran2-CvRRB1hLBCj/api/pokedex2) created by `Luis Duran`.
-- And of course, [Stack Overflow](https://stackoverflow.com/).
+- We used `Pokemon` images owned entirely by `Nintendo` and its affiliates.
+- And of course, thank you [Stack Overflow](https://stackoverflow.com/).
 
 ## What I Learned
 
