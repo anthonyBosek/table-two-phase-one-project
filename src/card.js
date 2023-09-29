@@ -71,14 +71,19 @@ const addCardToCart = (e) => {
   const max = parseInt(e.target["card-qty"].max);
   const poke = document.getElementById("card-title").innerText;
   if (qty) {
-    if (!userData.items[poke]) {
-      userData.items[poke] = [qty, max];
+    if (userData.items[poke] && (qty + userData.items[poke][0]) >= userData.items[poke][1]) {
+      alert("You already have the max in the cart")
     } else {
-      userData.items[poke][0] += qty;
-      userData.items[poke][1] = max;
+      if (!userData.items[poke]) {
+        userData.items[poke] = [qty, max];
+      } else {
+        userData.items[poke][0] += qty;
+        userData.items[poke][1] = max;
+      }
+      addToCart.reset();
+      alert(`${qty} ${poke} added to cart!`);
     }
-    addToCart.reset();
-    alert(`${qty} ${poke} added to cart!`);
+    
   } else {
     alert("Please enter a quantity");
   }
