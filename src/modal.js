@@ -55,7 +55,15 @@ const createTableRowData = (pokeObj, amt) => {
   input.max = pokeObj.inventory;
   input.min = 0;
   cardAmounts[pokeObj.name] = amt;
-  input.addEventListener("change", updateOrder);
+  input.addEventListener("change", (e) => {
+    if (Number(e.target.value) > Number(input.max)) {
+      e.target.value = input.max;
+      alert(`Only ${input.max} of this card in stock.`)
+    } else if (Number(e.target.value) < Number(input.min)) {   
+      e.target.value = input.min;
+    } 
+      updateOrder(e);
+  });
   tr.innerHTML = `
         <td class="right-border width-50-pc">${pokeObj.name}</td>
         <td class="eachPrice width-15-pc">$${pokeObj.price}</td>
@@ -145,7 +153,7 @@ const updateOrder = (e) => {
   const newAmt = qtyInput - cardAmounts[nameTD];
   const newTotalPrice = (Number(span3.textContent.split("$")[1]) + Number(newAmt * eachPrice)).toFixed(2); 
   userData.amountDue = newTotalPrice;
-  totalPrice = newTotalPrice;
+  // totalPrice = newTotalPrice;
   userData.items[nameTD] = [qtyInput, userData.items[nameTD][1]];
   trTotalPrice.textContent = `$${(qtyInput * eachPrice).toFixed(2)}`;
   span3.textContent = `$${newTotalPrice}`;

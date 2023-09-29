@@ -529,7 +529,7 @@ footer {
     padding: 1% 3% 0 0;
   }
   #control-bar {
-    min-width: 300px;
+    min-width: 315px;
   }
   #search > input:nth-child(1) {
     width: 150px;
