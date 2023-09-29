@@ -72,8 +72,9 @@ const addCardToCart = (e) => {
   const poke = document.getElementById("card-title").innerText;
   if (qty) {
     if (userData.items[poke] && (qty + userData.items[poke][0]) >= userData.items[poke][1]) {
-      alert("You already have the max in the cart")
+      alert("You are trying to add more cards that are in stock.")
     } else {
+      lastCardCreated = poke;
       if (!userData.items[poke]) {
         userData.items[poke] = [qty, max];
       } else {

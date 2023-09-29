@@ -113,11 +113,21 @@ const displayCartData = () => {
 
 // Update Inventory when order is placed
 const patchInventory = (obj) => {
+  let limit = Object.keys(obj).length - 1;
+  let counter = 0;
   for (let key in obj) {
     let _id = searchObj[key];
     let qty = obj[key][1] - obj[key][0];
+    subtractFromInventory[key] = subtractFromInventory[key] - obj[key][0];
     patchJSON(`${URL}/${_id}`, { inventory: qty })
-      .then((data) => getInventory())
+      .then((data) => {
+        getInventory()
+        if (counter === limit) {
+          createCard(data)
+        } else {
+          counter++;
+        }
+      })
       .catch((err) => console.log("Error: ", err));
   }
 };
@@ -133,9 +143,10 @@ const placeOrder = (e) => {
     patchInventory(items);
     modalContainer.classList.toggle("hide");
     alert(
-      `Thank you ${name} your order for $${amountDue} was placed!`
+      `Thank you ${name} your order for $${totalPrice} was placed!`
     );
     amountDue = 0;
+    totalPrice = 0;
     userData.items = {};
     tableBody.innerHTML = "";
     span3.textContent = ""
@@ -153,7 +164,7 @@ const updateOrder = (e) => {
   const newAmt = qtyInput - cardAmounts[nameTD];
   const newTotalPrice = (Number(span3.textContent.split("$")[1]) + Number(newAmt * eachPrice)).toFixed(2); 
   userData.amountDue = newTotalPrice;
-  // totalPrice = newTotalPrice;
+  totalPrice = newTotalPrice;
   userData.items[nameTD] = [qtyInput, userData.items[nameTD][1]];
   trTotalPrice.textContent = `$${(qtyInput * eachPrice).toFixed(2)}`;
   span3.textContent = `$${newTotalPrice}`;

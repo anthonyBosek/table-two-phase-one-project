@@ -30,6 +30,9 @@ const card = document.getElementById("card");
 const cardBanner = document.getElementById("card-banner");
 const addToCart = document.getElementById("add-to-cart-form");
 const cardQty = document.getElementById("card-qty");
+const subtractFromInventory = {};
+let count = 0;
+let lastCardCreated = {};
 
 // Modal Variables
 let totalPrice = 0;
