@@ -119,9 +119,9 @@ const patchInventory = (obj) => {
     patchJSON(`${URL}/${_id}`, { inventory: qty })
       .then((data) => {
         getInventory()
-        if (data.id === lastCardCreated.id) {
-          lastCardCreated.inventory = qty;
-          createCard(lastCardCreated)
+        if (data.id === lastCardDisplayed.id) {
+          lastCardDisplayed.inventory = qty;
+          createCard(lastCardDisplayed)
         } 
       })
       .catch((err) => console.log("Error: ", err));
