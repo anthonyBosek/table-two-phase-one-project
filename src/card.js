@@ -52,6 +52,7 @@ const createCard = (pokemonObj, bool = false) => {
   const hr2 = document.createElement("hr");
 
   cardQty.max = pokemonObj.inventory;
+  cardQty.value = 1;
 
   card.append(
     cardHeader,

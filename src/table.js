@@ -64,10 +64,6 @@ const displayPokemonTable = (pokemonArray) => {
       cardPrice
     );
     pokemonTable.append(pokemonItem);
-    if (count <= 50) {
-      subtractFromInventory[pokemon.name] = 0;
-      count++
-    }
   });
 };
 

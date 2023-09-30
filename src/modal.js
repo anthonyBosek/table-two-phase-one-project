@@ -113,20 +113,16 @@ const displayCartData = () => {
 
 // Update Inventory when order is placed
 const patchInventory = (obj) => {
-  let limit = Object.keys(obj).length - 1;
-  let counter = 0;
   for (let key in obj) {
     let _id = searchObj[key];
     let qty = obj[key][1] - obj[key][0];
-    subtractFromInventory[key] = subtractFromInventory[key] - obj[key][0];
     patchJSON(`${URL}/${_id}`, { inventory: qty })
       .then((data) => {
         getInventory()
-        if (counter === limit) {
-          createCard(data)
-        } else {
-          counter++;
-        }
+        if (data.id === lastCardCreated.id) {
+          lastCardCreated.inventory = qty;
+          createCard(lastCardCreated)
+        } 
       })
       .catch((err) => console.log("Error: ", err));
   }

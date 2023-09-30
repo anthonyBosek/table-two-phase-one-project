@@ -30,7 +30,6 @@ const card = document.getElementById("card");
 const cardBanner = document.getElementById("card-banner");
 const addToCart = document.getElementById("add-to-cart-form");
 const cardQty = document.getElementById("card-qty");
-const subtractFromInventory = {};
 let count = 0;
 let lastCardCreated = {};
 
@@ -75,7 +74,7 @@ const getOnePokemon = (_id = dealId) => {
             <br>
             ${name} - $${price}`;
       createCard(data, isDOD);
-
+      lastCardCreated = data;
       isDOD = false;
     })
     .catch((err) => console.log("Error: ", err));
