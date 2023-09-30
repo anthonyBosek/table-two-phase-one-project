@@ -71,6 +71,14 @@ const addCardToCart = (e) => {
   const qty = parseInt(e.target["card-qty"].value);
   const max = parseInt(e.target["card-qty"].max);
   const poke = document.getElementById("card-title").innerText;
+  if (qty > cardSelectedForDisplay[poke].inventory) {
+    cardQty.value = cardSelectedForDisplay[poke].inventory;
+    return alert(`We only have ${cardSelectedForDisplay[poke].inventory} in stock`)
+  }
+  if (qty < 0) {
+    cardQty.value = 0;
+    return alert(`The lowest amount you can order is 0`)
+  }
   if (qty) {
     if (userData.items[poke] && (qty + userData.items[poke][0]) >= userData.items[poke][1]) {
       alert("You are trying to add more cards that are in stock.")

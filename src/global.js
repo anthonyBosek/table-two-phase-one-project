@@ -32,7 +32,7 @@ const addToCart = document.getElementById("add-to-cart-form");
 const cardQty = document.getElementById("card-qty");
 let count = 0;
 let lastCardDisplayed = {};
-
+let cardSelectedForDisplay = {};
 // Modal Variables
 let totalPrice = 0;
 let quantity = 0;
@@ -73,8 +73,9 @@ const getOnePokemon = (_id = dealId) => {
           : `<p class="hidden-text">Deal of the Day!</p>
             <br>
             ${name} - $${price}`;
-      createCard(data, isDOD);
+      cardSelectedForDisplay[data.name] = data;
       lastCardDisplayed = data;
+      createCard(data, isDOD);
       isDOD = false;
     })
     .catch((err) => console.log("Error: ", err));
