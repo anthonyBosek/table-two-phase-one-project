@@ -56,11 +56,12 @@ const createTableRowData = (pokeObj, amt) => {
   input.min = 0;
   cardAmounts[pokeObj.name] = amt;
   input.addEventListener("change", (e) => {
-    if (Number(e.target.value) > Number(input.max)) {
-      e.target.value = input.max;
-      alert(`Only ${input.max} of this card in stock.`)
-    } else if (Number(e.target.value) < Number(input.min)) {   
-      e.target.value = input.min;
+    if (Number(e.target.value) > Number(cardSelectedForDisplay[pokeObj.name].inventory)) {
+      e.target.value = cardSelectedForDisplay[pokeObj.name].inventory;
+      alert(`Only ${cardSelectedForDisplay[pokeObj.name].inventory} of this card in stock.`)
+    } else if (Number(e.target.value) < 0) {   
+      alert(`Minimum order number is 0.`)
+      e.target.value = 0;
     } 
       updateOrder(e);
   });
@@ -117,7 +118,14 @@ const patchInventory = (obj) => {
     let _id = searchObj[key];
     let qty = obj[key][1] - obj[key][0];
     patchJSON(`${URL}/${_id}`, { inventory: qty })
-      .then((data) => getInventory())
+      .then((data) => {
+        getInventory()
+        cardSelectedForDisplay[data.name].inventory = qty;
+        if (data.id === lastCardDisplayed.id) {
+          lastCardDisplayed.inventory = qty;
+          createCard(lastCardDisplayed)
+        } 
+      })
       .catch((err) => console.log("Error: ", err));
   }
 };
@@ -130,16 +138,37 @@ const placeOrder = (e) => {
   if (isEmpty) {
     alert("Please add items to your cart");
   } else {
-    patchInventory(items);
-    modalContainer.classList.toggle("hide");
-    alert(
-      `Thank you ${name} your order for $${amountDue} was placed!`
-    );
-    amountDue = 0;
-    userData.items = {};
-    tableBody.innerHTML = "";
-    span3.textContent = ""
-    cardAmounts = {};
+    let orderBool = true;
+    let badOrderArr = [];
+    const modalTrs = Array.from(document.querySelectorAll("#modal tr"));
+    modalTrs.shift();
+    modalTrs.forEach(item => {
+      const numOrdered = item.querySelector("input").value;
+      const itemOrdered = item.querySelector("td").textContent
+      if (numOrdered > cardSelectedForDisplay[itemOrdered].inventory) {
+        orderBool = false;
+        badOrderArr.push(itemOrdered);
+      }
+      if (numOrdered < 0) {
+        orderBool = false;
+        badOrderArr.push(itemOrdered);
+      }
+    })
+    if (orderBool) {
+      patchInventory(items);
+      modalContainer.classList.toggle("hide");
+      alert(
+        `Thank you ${name} your order for $${totalPrice} was placed!`
+      );
+      amountDue = 0;
+      totalPrice = 0;
+      userData.items = {};
+      tableBody.innerHTML = "";
+      span3.textContent = ""
+      cardAmounts = {};
+    } else {
+      return alert(`You attempted to order an inappropriate amount of ${badOrderArr.join(", ")} cards.`)
+    }
   }
 };
 
@@ -153,7 +182,7 @@ const updateOrder = (e) => {
   const newAmt = qtyInput - cardAmounts[nameTD];
   const newTotalPrice = (Number(span3.textContent.split("$")[1]) + Number(newAmt * eachPrice)).toFixed(2); 
   userData.amountDue = newTotalPrice;
-  // totalPrice = newTotalPrice;
+  totalPrice = newTotalPrice;
   userData.items[nameTD] = [qtyInput, userData.items[nameTD][1]];
   trTotalPrice.textContent = `$${(qtyInput * eachPrice).toFixed(2)}`;
   span3.textContent = `$${newTotalPrice}`;
